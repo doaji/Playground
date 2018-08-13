@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SOAPXMLDataSource1">
+  <ConnectionProperties>
+    <Extension>XML</Extension>
+    <ConnectString>http://localhost:12045/WS/WebService1.asmx</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>809167de-2fea-48ea-bad2-050695f8a29f</DataSourceID>
+</RptDataSource>

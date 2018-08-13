@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="WCFXMLDataSource1">
+  <ConnectionProperties>
+    <Extension>XML</Extension>
+    <ConnectString>http://localhost:14072/Service1.svc</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>a0f6f3d5-8a56-4866-bf0e-54b44069e3a8</DataSourceID>
+</RptDataSource>

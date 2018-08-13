@@ -1,0 +1,57 @@
+﻿{
+  "MainContent": "page",
+  "MainAttributeName": "id",
+  "RemoveElements": [
+    {
+      "Tag": "div",
+      "ID": "article_menus clearfix",
+      "AttributeName": "class"
+    },
+    {
+      "Tag": "div",
+      "ID": "sn_published",
+      "AttributeName": "class"
+    },
+    {
+      "Tag": "div",
+      "ID": "clearfix social-wrapper",
+      "AttributeName": "class"
+    },
+    {
+      "Tag": "div",
+      "ID": "authorheadline_footer",
+      "AttributeName": "class"
+    },
+    {
+      "Tag": "div",
+      "ID": "widget_author_footer vspace",
+      "AttributeName": "class"
+    },
+    {
+      "Tag": "div",
+      "ID": "taboola-below-article-thumbnails",
+      "AttributeName": "class"
+    },
+    {
+      "Tag": "div",
+      "ID": "facebook_comments_anchor",
+      "AttributeName": "class"
+    },
+    {
+      "Tag": "div",
+      "ID": "module_title clearfix",
+      "AttributeName": "class"
+    },
+    {
+      "Tag": "div",
+      "ID": "fblb",
+      "AttributeName": "class"
+    },
+        {
+      "Tag": "div",
+      "ID": "border-color:#000;border:1px solid;padding:10px;",
+      "AttributeName": "style"
+    }
+  ]
+}
+

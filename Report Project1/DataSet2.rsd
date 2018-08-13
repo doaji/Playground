@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet2">
+    <Query>
+      <DataSourceReference>WCFXMLDataSource1</DataSourceReference>
+      <CommandText>&lt;Query&gt;
+   &lt;Method Name="GetHello" 
+Namespace="http://localhost:14072/Service1"&gt;
+   &lt;/Method&gt;
+   &lt;ElementPath IgnoreNamespaces="true"&gt;
+*
+&lt;/ElementPath&gt;
+
+&lt;/Query&gt;</CommandText>
+      <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+    </Query>
+  </DataSet>
+</SharedDataSet>
