@@ -1,10 +1,553 @@
-﻿<!DOCTYPE html>
-<html>
+﻿
+<!DOCTYPE html>
+<html lang="en-US" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+    <meta charset="UTF-8" />
+    <script type="b2085231c2b526f8dde945f0-text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tolani Baj lists Nigerian &quot;underground artists way better than mainstream artists&quot; in New Vlog | BN TV - BellaNaija</title>
+    <meta name="description" content="In her latest vlog, music enthusiast, Tolani Baj lists underground Nigerian artists she says are &quot;way better than mainstream artists&quot; but because of their - BN TV. August 15, 2018" />
+    <meta name="news_keywords" content="1da banton, bn tv, boj, buju, damilare, demmie vee, hameed idowu, minz, terry apala, tolani baj, tomi agape, tomi thomas, wurld, bellanaija, nation, lifestyle, entertainment, arts, books, celebrities, movies, music, tv, headlines" />
+    <meta name="original-source" content="https://www.bellanaija.com/2018/08/tolani-baj-lists-nigerian-underground-artists-way-better-mainstream-artists-new-vlog-bn-tv/" />
+    <meta name="robots" content="noodp" />
+    <link rel="canonical" href="https://www.bellanaija.com/2018/08/tolani-baj-lists-nigerian-underground-artists-way-better-mainstream-artists-new-vlog-bn-tv/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Tolani Baj lists Nigerian &quot;underground artists way better than mainstream artists&quot; in New Vlog | BN TV - BellaNaija" />
+    <meta property="og:description" content="In her latest vlog, music enthusiast, Tolani Baj lists underground Nigerian artists she says are &quot;way better than mainstream artists&quot; but because of their - BN TV. August 15, 2018" />
+    <meta property="og:url" content="https://www.bellanaija.com/2018/08/tolani-baj-lists-nigerian-underground-artists-way-better-mainstream-artists-new-vlog-bn-tv/" />
+    <meta property="og:site_name" content="BellaNaija" />
+    <meta property="article:publisher" content="https://www.facebook.com/bellanaija/" />
+    <meta property="article:tag" content="1da Banton" />
+    <meta property="article:tag" content="BN TV" />
+    <meta property="article:tag" content="boj" />
+    <meta property="article:tag" content="Buju" />
+    <meta property="article:tag" content="Damilare" />
+    <meta property="article:tag" content="Demmie Vee" />
+    <meta property="article:tag" content="Hameed Idowu" />
+    <meta property="article:tag" content="Minz" />
+    <meta property="article:tag" content="Terry Apala" />
+    <meta property="article:tag" content="Tolani Baj" />
+    <meta property="article:tag" content="Tomi Agape" />
+    <meta property="article:tag" content="Tomi Thomas" />
+    <meta property="article:tag" content="Wurld" />
+    <meta property="article:section" content="BN TV" />
+    <meta property="article:published_time" content="2018-08-15T16:23:34+01:00" />
+    <meta property="fb:app_id" content="820891061411198" />
+    <meta property="og:image" content="https://www.bellanaija.com/wp-content/uploads/2018/08/tolani-baj.jpg" />
+    <meta property="og:image:width" content="480" />
+    <meta property="og:image:height" content="360" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="In her latest vlog, music enthusiast, Tolani Baj lists underground Nigerian artists she says are &quot;way better than mainstream artists&quot; but because of their - BN TV. August 15, 2018" />
+    <meta name="twitter:title" content="Tolani Baj lists Nigerian &quot;underground artists way better than mainstream artists&quot; in New Vlog | BN TV - BellaNaija" />
+    <meta name="twitter:site" content="@bellanaija" />
+    <meta name="twitter:image" content="https://www.bellanaija.com/wp-content/uploads/2018/08/tolani-baj.jpg" />
+    <meta name="twitter:creator" content="@bellanaija" />
+    <meta property="DC.date.issued" content="2018-08-15T16:23:34+01:00" />
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel='dns-prefetch' href='//ad.doubleclick.net' />
+    <link rel='dns-prefetch' href='//adx.g.doubleclick.net' />
+    <link rel='dns-prefetch' href='//ade.googlesyndication.com' />
+    <link rel='dns-prefetch' href='//cas.nl.eu.criteo.com' />
+    <link rel='dns-prefetch' href='//pix.nl.eu.criteo.net' />
+    <link rel='dns-prefetch' href='//s0.2mdn.net' />
+    <link rel='dns-prefetch' href='//cm.g.doubleclick.net' />
+    <link rel='dns-prefetch' href='//fonts.gstatic.com' />
+    <link rel='dns-prefetch' href='//googleads.g.doubleclick.net' />
+    <link rel='dns-prefetch' href='//securepubads.g.doubleclick.net' />
+    <link rel='dns-prefetch' href='//tpc.googlesyndication.com' />
+    <link rel='dns-prefetch' href='//www.youtube.com' />
+    <link rel='dns-prefetch' href='//www.google.com' />
+    <link rel='dns-prefetch' href='//www.googletagservices.com' />
+    <link rel='dns-prefetch' href='//ssl.google-analytics.com' />
+    <link rel='dns-prefetch' href='//pagead2.googlesyndication.com' />
+    <link rel='dns-prefetch' href='//bs.serving-sys.com' />
+    <link rel='dns-prefetch' href='//serving-sys.com' />
+    <link rel="alternate" type="application/rss+xml" title="BellaNaija &raquo; Feed" href="https://www.bellanaija.com/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="BellaNaija &raquo; Comments Feed" href="https://www.bellanaija.com/comments/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="BellaNaija &raquo; Tolani Baj lists Nigerian &#8220;underground artists way better than mainstream artists&#8221; in New Vlog | BN TV Comments Feed" href="https://www.bellanaija.com/2018/08/tolani-baj-lists-nigerian-underground-artists-way-better-mainstream-artists-new-vlog-bn-tv/feed/" />
+    <meta property="og:title" content="Tolani Baj lists Nigerian &#8220;underground artists way better than mainstream artists&#8221; in New Vlog | BN TV" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.bellanaija.com/2018/08/tolani-baj-lists-nigerian-underground-artists-way-better-mainstream-artists-new-vlog-bn-tv/" />
+    <meta property="og:site_name" content="BellaNaija" />
+    <meta property="og:image" content="https://www.bellanaija.com/wp-content/uploads/2018/08/tolani-baj.jpg" />
+    <style type="text/css">
+        img.wp-smiley, img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='wpfp-css' href='https://www.bellanaija.com/wp-content/cache/min/1/wp-content/plugins/bn-favourites/wpfp-2b9a28d60d9d040811b0bc282a9d228f.css' data-minify="1" type='text/css' />
+    <link rel='stylesheet' href='https://www.bellanaija.com/wp-content/cache/min/1/wp-content/themes/diamonds/style-d39e6734304794f30f47349a5ba2bae8.css' data-minify="1" type='text/css' media='all' />
+    <link rel='stylesheet' href='https://www.bellanaija.com/wp-content/cache/busting/1/wp-content/plugins/bn-social-buttons/css/public.min-1.2.2.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Raleway%3A400%2C700%7COpen+Sans%3A400italic%2C400%2C700%7COpen+Sans+Condensed%3A300%2C700%7CMerriweather%3A400%2C700%7COswald%3A300%2C400%2C700&#038;ver=4.9.8' type='text/css' media='all' />
+    <link rel='stylesheet' href='https://www.bellanaija.com/wp-content/cache/min/1/wp-content/themes/diamonds/css/bn-e5aeaa99c2755efff23ab9faae462180.css' data-minify="1" type='text/css' media='all' />
+    <link rel='stylesheet' href='https://www.bellanaija.com/wp-content/cache/busting/1/wp-includes/js/mediaelement/mediaelementplayer-legacy.min-4.2.6-78496d1.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='https://www.bellanaija.com/wp-content/cache/busting/1/wp-content/plugins/cue/assets/css/cue.min-2.3.0.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='https://www.bellanaija.com/wp-content/themes/diamonds/css/more.css?ver=1506885392' type='text/css' media='all' />
+    <link rel='stylesheet' href='https://www.bellanaija.com/wp-content/cache/min/1/wp-content/themes/diamonds/css/comments-6ab39fb0b9bfb8833250f62e0a150057.css' data-minify="1" type='text/css' media='all' />
+    <link rel='stylesheet' href='https://www.bellanaija.com/wp-content/cache/min/1/wp-content/themes/diamonds/css/buttons-ac0f039f13e639359e60eee21078e9cb.css' data-minify="1" type='text/css' media='all' />
+    <link rel='stylesheet' href='https://www.bellanaija.com/wp-content/cache/min/1/wp-content/themes/diamonds/css/media-queries-373f409f4dac3d0d322df649801d4ec0.css' data-minify="1" type='text/css' media='all' />
+    <link rel='stylesheet' href='https://www.bellanaija.com/wp-content/cache/min/1/wp-content/plugins/shiftnav-pro/pro/assets/css/shiftnav-43a04dd13a45c19f1093d7b1e82bbc58.css' data-minify="1" type='text/css' media='all' />
+    <link rel='stylesheet' href='https://www.bellanaija.com/wp-content/cache/busting/1/wp-content/plugins/shiftnav-pro/assets/css/fontawesome/css/font-awesome.min-1.2.0.1.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='https://www.bellanaija.com/wp-content/cache/min/1/wp-content/plugins/shiftnav-pro/pro/assets/css/skins/dark-red-c44e2fbc17531e70699e99f915de59a9.css' data-minify="1" type='text/css' media='all' />
+    <style id='rocket-lazyload-inline-css' type='text/css'>
+        .rll-youtube-player {
+            position: relative;
+            padding-bottom: 56.23%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin: 5px;
+        }
 
+            .rll-youtube-player iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 100;
+                background: 0 0;
+            }
+
+            .rll-youtube-player img {
+                bottom: 0;
+                display: block;
+                left: 0;
+                margin: auto;
+                max-width: 100%;
+                width: 100%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                border: none;
+                height: auto;
+                cursor: pointer;
+                -webkit-transition: .4s all;
+                -moz-transition: .4s all;
+                transition: .4s all;
+            }
+
+                .rll-youtube-player img:hover {
+                    -webkit-filter: brightness(75%);
+                }
+
+            .rll-youtube-player .play {
+                height: 72px;
+                width: 72px;
+                left: 50%;
+                top: 50%;
+                margin-left: -36px;
+                margin-top: -36px;
+                position: absolute;
+                background: url(https://www.bellanaija.com/wp-content/plugins/wp-rocket/inc/front/img/play.png) no-repeat;
+                cursor: pointer;
+            }
+    </style>
+    <link rel='stylesheet' href='https://www.bellanaija.com/wp-content/cache/min/1/wp-content/plugins/wp-banners/css/wp-banners-default-9d0b16ba50545dc2eb6382b2fef97562.css' data-minify="1" type='text/css' media='all' />
+    <script type="b2085231c2b526f8dde945f0-text/javascript" src='https://www.bellanaija.com/wp-content/cache/busting/1/wp-includes/js/jquery/jquery-1.12.4.js'></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript" src='https://www.bellanaija.com/wp-content/cache/busting/1/wp-includes/js/jquery/jquery-migrate.min-1.4.1.js'></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript" src='https://www.bellanaija.com/wp-content/cache/min/1/wp-content/themes/diamonds/js/jquery.cookie-00b8692f5625375c0275f7e4a61cd5a5.js' data-minify="1"></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">/* <![CDATA[ */ var bnAjax = {"ajaxurl":"https:\/\/www.bellanaija.com\/wp-admin\/admin-ajax.php"}; /* ]]> */</script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript" src='https://www.bellanaija.com/wp-content/cache/min/1/wp-content/themes/diamonds/js/front-4e8f323e3ff61cf7aa865eed227063c3.js' data-minify="1"></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">var mejsL10n = {"language":"en","strings":{"mejs.install-flash":"You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/","mejs.fullscreen-off":"Turn off Fullscreen","mejs.fullscreen-on":"Go Fullscreen","mejs.download-video":"Download Video","mejs.fullscreen":"Fullscreen","mejs.time-jump-forward":["Jump forward 1 second","Jump forward %1 seconds"],"mejs.loop":"Toggle Loop","mejs.play":"Play","mejs.pause":"Pause","mejs.close":"Close","mejs.time-slider":"Time Slider","mejs.time-help-text":"Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.","mejs.time-skip-back":["Skip back 1 second","Skip back %1 seconds"],"mejs.captions-subtitles":"Captions\/Subtitles","mejs.captions-chapters":"Chapters","mejs.none":"None","mejs.mute-toggle":"Mute Toggle","mejs.volume-help-text":"Use Up\/Down Arrow keys to increase or decrease volume.","mejs.unmute":"Unmute","mejs.mute":"Mute","mejs.volume-slider":"Volume Slider","mejs.video-player":"Video Player","mejs.audio-player":"Audio Player","mejs.ad-skip":"Skip ad","mejs.ad-skip-info":["Skip in 1 second","Skip in %1 seconds"],"mejs.source-chooser":"Source Chooser","mejs.stop":"Stop","mejs.speed-rate":"Speed Rate","mejs.live-broadcast":"Live Broadcast","mejs.afrikaans":"Afrikaans","mejs.albanian":"Albanian","mejs.arabic":"Arabic","mejs.belarusian":"Belarusian","mejs.bulgarian":"Bulgarian","mejs.catalan":"Catalan","mejs.chinese":"Chinese","mejs.chinese-simplified":"Chinese (Simplified)","mejs.chinese-traditional":"Chinese (Traditional)","mejs.croatian":"Croatian","mejs.czech":"Czech","mejs.danish":"Danish","mejs.dutch":"Dutch","mejs.english":"English","mejs.estonian":"Estonian","mejs.filipino":"Filipino","mejs.finnish":"Finnish","mejs.french":"French","mejs.galician":"Galician","mejs.german":"German","mejs.greek":"Greek","mejs.haitian-creole":"Haitian Creole","mejs.hebrew":"Hebrew","mejs.hindi":"Hindi","mejs.hungarian":"Hungarian","mejs.icelandic":"Icelandic","mejs.indonesian":"Indonesian","mejs.irish":"Irish","mejs.italian":"Italian","mejs.japanese":"Japanese","mejs.korean":"Korean","mejs.latvian":"Latvian","mejs.lithuanian":"Lithuanian","mejs.macedonian":"Macedonian","mejs.malay":"Malay","mejs.maltese":"Maltese","mejs.norwegian":"Norwegian","mejs.persian":"Persian","mejs.polish":"Polish","mejs.portuguese":"Portuguese","mejs.romanian":"Romanian","mejs.russian":"Russian","mejs.serbian":"Serbian","mejs.slovak":"Slovak","mejs.slovenian":"Slovenian","mejs.spanish":"Spanish","mejs.swahili":"Swahili","mejs.swedish":"Swedish","mejs.tagalog":"Tagalog","mejs.thai":"Thai","mejs.turkish":"Turkish","mejs.ukrainian":"Ukrainian","mejs.vietnamese":"Vietnamese","mejs.welsh":"Welsh","mejs.yiddish":"Yiddish"}};</script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript" src='https://www.bellanaija.com/wp-content/cache/busting/1/wp-includes/js/mediaelement/mediaelement-and-player.min-4.2.6-78496d1.js'></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript" src='https://www.bellanaija.com/wp-includes/js/mediaelement/mediaelement-migrate.min.js'></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">/* <![CDATA[ */ var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"}; /* ]]> */</script> <!--[if lt IE 9]> <script type='text/javascript' src='https://www.bellanaija.com/wp-content/themes/genesis/lib/js/html5shiv.min.js?ver=3.7.3'></script> <![endif]-->
+    <script type="b2085231c2b526f8dde945f0-text/javascript" src='https://www.bellanaija.com/wp-content/cache/min/1/wp-content/plugins/bn-favourites/wpfp-1d75cb84afeda060bbb42b1aba7b8b0d.js' data-minify="1"></script>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="BellaNaija">
+    <meta name="apple-mobile-web-app-title" content="BellaNaija">
+    <meta name="theme-color" content="#ad082b">
+    <meta name="msapplication-navbutton-color" content="#ad082b">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="/android-chrome-256x256.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="256x256" href="/android-chrome-256x256.png">
+    <script type="b2085231c2b526f8dde945f0-text/javascript">
+        if ('serviceWorker' in navigator) {
+                        navigator.serviceWorker.register('/sw.js').then(function (sw) {
+                            console.log('Service worker installed', sw);
+                            sw.update();
+                        }).catch(function (err) {
+                            console.log(err);
+                        })
+                    }</script>
+    <link rel='https://api.w.org/' href='https://www.bellanaija.com/wp-json/' />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.bellanaija.com/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.bellanaija.com/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 4.9.8" />
+    <link rel='shortlink' href='https://www.bellanaija.com/?p=1203476' />
+    <link rel="alternate" type="application/json+oembed" href="https://www.bellanaija.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.bellanaija.com%2F2018%2F08%2Ftolani-baj-lists-nigerian-underground-artists-way-better-mainstream-artists-new-vlog-bn-tv%2F" />
+    <link rel="alternate" type="text/xml+oembed" href="https://www.bellanaija.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.bellanaija.com%2F2018%2F08%2Ftolani-baj-lists-nigerian-underground-artists-way-better-mainstream-artists-new-vlog-bn-tv%2F&#038;format=xml" />
+    <style type="text/css" id="shiftnav-dynamic-css">
+        @media only screen and (min-width:959px) {
+            #shiftnav-toggle-main {
+                display: none;
+            }
+
+            .shiftnav-wrap {
+                padding-top: 0 !important;
+            }
+
+            body.shiftnav-disable-shift-body {
+                padding-top: 0 !important;
+            }
+        }
+
+        @media only screen and (max-width:958px) {
+            .nav-primary {
+                display: none !important;
+            }
+        }
+
+        nav.shiftnav-nav {
+            font-family: 'Raleway',sans-serif !important;
+        }
+    </style>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">
+        var wpbrUrl = 'https://www.bellanaija.com/wp-content/plugins/wp-banners';
+        var wpbrAjax = 'https://www.bellanaija.com/wp-content/plugins/wp-banners/wp-banners-ajax.php';
+        var wpbrajaxurl = 'https://www.bellanaija.com/wp-admin/admin-ajax.php';
+        var wpbrRefresh = '15000';
+        var registertimeout = false;
+
+            var wpbrFadeBanners = false;</script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">
+        /* <![CDATA[ */ //<![CDATA[
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-2805923-30']);
+                _gaq.push(['_trackPageview']);
+                (function () {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(ga, s);
+                })();
+                //]]> /* ]]> */</script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">
+        /* <![CDATA[ */ //<![CDATA[
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-98458120-1']);
+                _gaq.push(['_trackPageview']);
+                (function () {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(ga, s);
+                })();
+                //]]> /* ]]> */</script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">
+        /* <![CDATA[ */ //<![CDATA[
+                var _gaq = _gaq || [];
+                _gaq.push(['_setAccount', 'UA-71901209-1']);
+                _gaq.push(['_trackPageview']);
+                (function () {
+                    var ga = document.createElement('script');
+                    ga.type = 'text/javascript';
+                    ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(ga, s);
+                })();
+                //]]> /* ]]> */</script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">
+        var isMobile = false; //initiate as false
+                // device detection
+                if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) isMobile = true;</script>
+    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js' type="b2085231c2b526f8dde945f0-text/javascript"></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">
+        var googletag = googletag || {};
+                googletag.cmd = googletag.cmd || [];</script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">
+        if(isMobile){
+                        googletag.cmd.push(function() {
+                            googletag.defineSlot('/74174237/ch_bellanaija_320x50_innerpagemobile1', [320, 50], 'div-gpt-ad-1525427649066-0').addService(googletag.pubads());
+                            googletag.pubads().enableSingleRequest();
+                            googletag.enableServices();
+                        });
+                    }else{
+                        googletag.cmd.push(function() {
+                            googletag.defineSlot('/74174237/BN_InnerPage_Leaderboard_728x90', [728, 90], 'div-gpt-ad-1487869980208-0').addService(googletag.pubads());
+                            googletag.pubads().enableSingleRequest();
+                            googletag.enableServices();
+                        });
+                    }
+                    googletag.cmd.push(function() {
+                        googletag.defineSlot('/74174237/ch2_bellanaija_300x250_innerpage_sidebar1', [300, 250], 'div-gpt-ad-1489737748863-0').addService(googletag.pubads());
+                        googletag.pubads().enableSingleRequest();
+                        googletag.enableServices();
+                    });
+
+                    googletag.cmd.push(function() {
+                        googletag.defineSlot('/74174237/BN_Innerpage_Desktop_Sidebar_2_300x250', [300, 250], 'div-gpt-ad-1489738117157-0').addService(googletag.pubads());
+                        googletag.pubads().enableSingleRequest();
+                        googletag.enableServices();
+                    });
+
+                    googletag.cmd.push(function() {
+                        googletag.defineSlot('/74174237/BN_Innerpage_Desktop_Sidebar3_300x250', [300, 250], 'div-gpt-ad-1489738293904-0').addService(googletag.pubads());
+                        googletag.pubads().enableSingleRequest();
+                        googletag.enableServices();
+                    });
+
+                    googletag.cmd.push(function() {
+                        googletag.defineSlot('/74174237/BN_Innerpage_Desktop_Sidebar4_300x250', [300, 250], 'div-gpt-ad-1501253036607-0').addService(googletag.pubads());
+                        googletag.pubads().enableSingleRequest();
+                        googletag.enableServices();
+                    });
+
+                    googletag.cmd.push(function() {
+                        googletag.defineSlot('/74174237/BN_Innerpage_Desktop_Sidebar5_300x250', [300, 250], 'div-gpt-ad-1489738418732-0').addService(googletag.pubads());
+                        googletag.pubads().enableSingleRequest();
+                        googletag.enableServices();
+                    });
+
+                    googletag.cmd.push(function() {
+                        googletag.defineSlot('/74174237/BN_Innerpage_Desktop_Sidebar6_300x250', [300, 250], 'div-gpt-ad-1489738449062-0').addService(googletag.pubads());
+                        googletag.pubads().enableSingleRequest();
+                        googletag.enableServices();
+                    });
+
+                    googletag.cmd.push(function() {
+                        googletag.defineSlot('/74174237/BN_Innerpag_Desktop_Sidebar7_300x250', [300, 250], 'div-gpt-ad-1495609418518-0').addService(googletag.pubads());
+                        googletag.pubads().enableSingleRequest();
+                        googletag.enableServices();
+                    });</script>
+    <link rel="icon" href="https://www.bellanaija.com//favicon.ico" />
+    <link rel="pingback" href="https://www.bellanaija.com/xmlrpc.php" />
+    <meta name="google-site-verification" content="oI8jO86a_v5TwLSS8J67x1tUGhpmOPtWnBauivwWfHw" />
+    <meta name="msvalidate.01" content="478E2891C735FF697E3B28E4A8DFB68E" />
+    <script type="b2085231c2b526f8dde945f0-text/javascript">
+        _atrk_opts = { atrk_acct:"hz/co1IW1810fn", domain:"bellanaija.com",dynamic: true};
+        (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();</script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">(function(a,b,c,d,e){e=a.createElement(b);a=a.getElementsByTagName(b)[0];e.async=1;e.src=c;a.parentNode.insertBefore(e,a)})(document,'script','//stupendoussleet.com/1fbcc115a193f72a7894a0db3cdb3357710398a1e9d83fd96c2d0a2cf3bd51285f7c00d6f99becac24e06e84429922cff77ae2674747a7a798b5ad5088e7');</script>
+    <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=hz/co1IW1810fn" style="display:none" height="1" width="1" alt="" /></noscript>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="b2085231c2b526f8dde945f0-text/javascript"></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">
+        (adsbygoogle = window.adsbygoogle || []).push({
+                  google_ad_client: "ca-pub-1554058024407090",
+                  enable_page_level_ads: true
+             });</script>
+    <style type="text/css">
+        .recentcomments a {
+            display: inline !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    </style>
+    <meta name="onesignal" content="wordpress-plugin" />
+    <link rel="manifest" href="https://www.bellanaija.com/manifest.json" />
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async type="b2085231c2b526f8dde945f0-text/javascript"></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">
+        window.OneSignal = window.OneSignal || [];
+
+              OneSignal.push( function() {
+                OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
+                OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
+                OneSignal.SERVICE_WORKER_PARAM = { scope: '/' };
+
+                OneSignal.setDefaultNotificationUrl("https://www.bellanaija.com");
+                var oneSignal_options = {};
+                window._oneSignalInitOptions = oneSignal_options;
+
+                oneSignal_options['wordpress'] = true;
+        oneSignal_options['appId'] = 'e1f2bd60-7025-4e91-b67f-3f6f779b4142';
+        oneSignal_options['autoRegister'] = true;
+        oneSignal_options['welcomeNotification'] = { };
+        oneSignal_options['welcomeNotification']['title'] = "";
+        oneSignal_options['welcomeNotification']['message'] = "";
+        oneSignal_options['path'] = "https://www.bellanaija.com/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/";
+        oneSignal_options['safari_web_id'] = "web.onesignal.auto.2d34c372-40ef-4eb5-956b-2d525ea9497b";
+        oneSignal_options['persistNotification'] = false;
+        oneSignal_options['promptOptions'] = { };
+                      OneSignal.init(window._oneSignalInitOptions);
+                            });
+
+              function documentInitOneSignal() {
+                var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+                var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+                  oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+              }
+
+              if (document.readyState === 'complete') {
+                   documentInitOneSignal();
+              }
+              else {
+                   window.addEventListener("load", function(event){
+                       documentInitOneSignal();
+                  });
+              }</script>
+    <link rel="preload" href="/wp-includes/js/jquery/jquery.js?ver=1.12.4" as="script">
+    <link rel="preload" href="/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1" as="script">
+    <link rel="preload" href="/wp-content/themes/diamonds/js/jquery.cookie.js?ver=1506885406" as="script">
+    <link rel="preload" href="/wp-content/themes/diamonds/js/front.js?ver=1506885406" as="script">
+    <link rel="preload" href="/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.6-78496d1" as="script">
+    <link rel="preload" href="/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=4.9.8" as="script">
+    <link rel="preload" href="/wp-content/themes/genesis/lib/js/html5shiv.min.js?ver=3.7.3" as="script">
+    <link rel="preload" href="/wp-content/plugins/bn-favourites/wpfp.js?ver=4.9.8" as="script">
+    <link rel="preload" href="/wp-content/themes/diamonds/style.css?ver=1.0" as="style">
+    <link rel="preload" href="/wp-content/plugins/bn-social-buttons/css/public.min.css?ver=1.2.2" as="style">
+    <link rel="preload" href="/wp-content/themes/diamonds/css/bn.css?ver=1522925337" as="style">
+    <link rel="preload" href="/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.6-78496d1" as="style">
+    <link rel="preload" href="/wp-content/plugins/cue/assets/css/cue.min.css?ver=2.3.0" as="style">
+    <link rel="preload" href="/wp-content/themes/diamonds/css/more.css?ver=1506885392" as="style">
+    <link rel="preload" href="/wp-content/themes/diamonds/css/comments.css?ver=1522312270" as="style">
+    <link rel="preload" href="/wp-content/themes/diamonds/css/buttons.css?ver=1522312269" as="style">
+    <link rel="preload" href="/wp-content/themes/diamonds/css/media-queries.css?ver=1522312272" as="style">
+    <link rel="preload" href="/wp-content/plugins/shiftnav-pro/pro/assets/css/shiftnav.css?ver=1.2.0.1" as="style">
+    <link rel="preload" href="/wp-content/plugins/shiftnav-pro/assets/css/fontawesome/css/font-awesome.min.css?ver=1.2.0.1" as="style">
+    <link rel="preload" href="/wp-content/plugins/shiftnav-pro/pro/assets/css/skins/dark-red.css?ver=1.2.0.1" as="style">
+    <link rel="preload" href="/wp-content/plugins/wp-banners/css/wp-banners-default.css?ver=4.9.8" as="style">
+</head>
+<body class="post-template-default single single-post postid-1203476 single-format-standard header-image content-sidebar webkit" itemscope itemtype="https://schema.org/WebPage">
+    <div class="site-container">
+        <header class="site-header" itemscope itemtype="https://schema.org/WPHeader">
+            <div class="wrap">
+                <div class="title-area"><p class="site-title" itemprop="headline"><a href="https://www.bellanaija.com/">BellaNaija</a></p><p class="site-description" itemprop="description">Nigeria breaking &amp; top news to the World 24/7. Read Today</p></div><div class="widget-area header-widget-area">
+                    <div id="header-ad">
+                        <section id="custom_html-3" class="widget_text widget widget_custom_html">
+                            <div class="widget_text widget-wrap">
+                                <div class="textwidget custom-html-widget">
+                                    <script type="b2085231c2b526f8dde945f0-text/javascript">
+                                        if(isMobile){
+                                                document.write("<ins class='adsbygoogle' style='display:inline-block;width:320px;height:50px' data-ad-client='ca-pub-1554058024407090' data-ad-slot='4628227187'></ins>\x3Cscript>(adsbygoogle = window.adsbygoogle || []).push({});\x3C/script>");
+                                            }else{
+                                                document.write("<div id='div-gpt-ad-1487869980208-0' style='height:90px; width:728px;margin:auto;z-index: 9;position:relative;'>\x3Cscript>googletag.cmd.push(function() { googletag.display('div-gpt-ad-1487869980208-0'); });\x3C/script></div>");
+                                            }</script>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </header><div class="site-inner"><nav class="nav-primary" aria-label="Main" itemscope itemtype="https://schema.org/SiteNavigationElement"><div class="wrap"><ul id="menu-header" class="menu genesis-nav-menu menu-primary"><li id="menu-item-401458" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-401458"><a href="https://www.bellanaija.com" itemprop="url"><span itemprop="name">Home</span></a></li><li id="menu-item-958630" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-958630"><a href="https://www.bellanaija.com/scoop/" itemprop="url"><span itemprop="name">Scoop</span></a></li><li id="menu-item-958629" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-958629"><a href="https://www.bellanaija.com/bntv/" itemprop="url"><span itemprop="name">BN TV</span></a></li><li id="menu-item-401469" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401469"><a href="https://www.bellanaija.com/weddings/" itemprop="url"><span itemprop="name">Weddings</span></a></li><li id="menu-item-401466" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401466"><a href="https://www.bellanaija.com/news/" itemprop="url"><span itemprop="name">News</span></a></li><li id="menu-item-1140863" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1140863"><a href="https://www.bellanaija.com/event/" itemprop="url"><span itemprop="name">Events</span></a></li><li id="menu-item-983729" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-983729"><a href="https://www.bellanaija.com/comedy/" itemprop="url"><span itemprop="name">Comedy</span></a></li><li id="menu-item-401465" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-401465"><a href="https://www.bellanaija.com/music/" itemprop="url"><span itemprop="name">Music</span></a></li><li id="menu-item-401470" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401470"><a href="https://www.bellanaija.com/features/" itemprop="url"><span itemprop="name">Features</span></a></li><li id="menu-item-401464" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401464"><a href="https://www.bellanaija.com/movies-tv/" itemprop="url"><span itemprop="name">Movies &#038; TV</span></a></li><li id="menu-item-401468" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401468"><a href="https://www.bellanaija.com/style/" itemprop="url"><span itemprop="name">Style</span></a></li><li id="menu-item-401459" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401459"><a href="https://www.bellanaija.com/beauty/" itemprop="url"><span itemprop="name">Beauty</span></a></li><li id="menu-item-401467" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401467"><a href="https://www.bellanaija.com/relationships/" itemprop="url"><span itemprop="name">Relationships</span></a></li><li id="menu-item-958628" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-958628"><a href="#!" itemprop="url"><span itemprop="name">More</span></a><ul class="sub-menu"><li id="menu-item-401460" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401460"><a href="https://www.bellanaija.com/career/" itemprop="url"><span itemprop="name">Career</span></a></li><li id="menu-item-401463" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401463"><a href="https://www.bellanaija.com/living/" itemprop="url"><span itemprop="name">Living</span></a></li><li id="menu-item-402773" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-402773"><a href="https://www.bellanaija.com/inspired/" itemprop="url"><span itemprop="name">Inspired!</span></a></li></ul></li></ul></div></nav><div class="content-sidebar-wrap"><main class="content"><article class="post-1203476 post type-post status-publish format-standard has-post-thumbnail category-bntv category-music tag-1da-banton tag-bn-tv tag-boj tag-buju tag-damilare tag-demmie-vee tag-hameed-idowu tag-minz tag-terry-apala tag-tolani-baj tag-tomi-agape tag-tomi-thomas tag-wurld entry" itemscope itemtype="https://schema.org/CreativeWork"><header class="entry-header"><h1 class="entry-title" itemprop="headline">Tolani Baj lists Nigerian &#8220;underground artists way better than mainstream artists&#8221; in New Vlog | BN TV</h1><p class="entry-meta"><span class="date time published bn-post-date" title="2018-08-15T16:23:34+0100">15.08.2018</span> at <time class="entry-time" itemprop="datePublished" datetime="2018-08-15T16:23:34+00:00">4:23 pm</time> By <span class="entry-author" itemprop="author" itemscope itemtype="https://schema.org/Person"><a href="https://www.bellanaija.com/author/bntv/" class="entry-author-link" itemprop="url" rel="author"><span class="entry-author-name" itemprop="name">BN TV</span></a></span> <span class="entry-comments-link"><a href="https://www.bellanaija.com/2018/08/tolani-baj-lists-nigerian-underground-artists-way-better-mainstream-artists-new-vlog-bn-tv/#respond">Leave a Comment</a></span></p></header><div class="entry-content" itemprop="text"><p><img class="aligncenter wp-image-1203482 size-full" src="https://www.bellanaija.com/wp-content/uploads/2018/08/tolani-baj.jpg" alt="" width="480" height="360" /></p><p>In her latest vlog, music enthusiast, <strong>Tolani Baj</strong> lists underground Nigerian artists she says are &#8220;way better than mainstream artists&#8221; but because of their lack of recognition, we may never know.</p><p>She said, given the right opportunity, these artists could become major industry sensations.</p><p>She named <strong>Terry Apala, Boj, 1da Banton, Demmie Vee, Wurld, Tomi Thomas, Damilare, Hameed Idowu, Tomi Agape, Minz </strong>and <strong>Buju </strong>on her list.</p><p>Watch vlog below:</p><p><div class="rll-youtube-player" data-id="GhpaEMr9gBY"></div><noscript><iframe width="500" height="281" src="https://www.youtube.com/embed/GhpaEMr9gBY?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></noscript></p><div style='text-align: center'><section id="text-133" class="widget widget_text"><div class="widget-wrap"><div class="textwidget">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="b2085231c2b526f8dde945f0-text/javascript"></script> <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-1554058024407090" data-ad-slot="5196708764"></ins>
+        <script type="b2085231c2b526f8dde945f0-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></section></div><section class="author-box" itemprop="author" itemscope itemtype="https://schema.org/Person"><img alt='BN TV' src='https://www.bellanaija.com/wp-content/uploads/2015/12/BN-TV_avatar_1451386071-70x70.png' class='avatar avatar-70 photo' height='70' width='70' /><h4 class="author-box-title">About <span itemprop="name">BN TV</span></h4><div class="author-box-content" itemprop="description"><p>The best Nigerian and African video content from around the web specially curated for YOU!</p></div></section></div><footer class="entry-footer"><div id="after-bn-post"></div><div class="footer-meta"><div class="footer-com"><div class="footer-com-inner"> <span class="bn-post-favourite" style="display:none;"> <a rel="nofollow" href="https://www.bellanaija.com/wp-admin/admin-ajax.php?action=bn_love_this&post_id=1203476&nonce=9d429b4520" class="bn-love" data-nonce="9d429b4520" data-post_id="1203476"> <img title="Love this" alt="Love this" src="https://www.bellanaija.com/wp-content/plugins/bn-favourites/img/heart.png"> </a> <a rel="nofollow" href="https://www.bellanaija.com/wp-admin/admin-ajax.php?action=bn_love_this&post_id=1203476&nonce=9d429b4520" class="bn-love" data-nonce="9d429b4520" data-post_id="1203476">love this</a> <em class="love-plus"><a rel="nofollow" href="https://www.bellanaija.com/wp-admin/admin-ajax.php?action=bn_love_this&post_id=1203476&nonce=9d429b4520" class="bn-love" data-nonce="9d429b4520" data-post_id="1203476">+</a></em> </span> <a rel="nofollow" href="https://www.bellanaija.com/2018/08/tolani-baj-lists-nigerian-underground-artists-way-better-mainstream-artists-new-vlog-bn-tv/#respond">Comment</a> &nbsp;<strong>0</strong></div></div><div class="user-actions"><div class="crafty-social-buttons crafty-social-share-buttons crafty-social-buttons-size-3"><ul class="crafty-social-buttons-list"><li><a class="crafty-social-button csb-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.bellanaija.com/2018/08/tolani-baj-lists-nigerian-underground-artists-way-better-mainstream-artists-new-vlog-bn-tv/" target="_blank"><img title="Facebook" alt="Facebook" width="30" height="30" src="https://www.bellanaija.com/wp-content/plugins/bn-social-buttons/buttons/simple/facebook.png" /></a></li><li><a class="crafty-social-button csb-twitter" href="https://twitter.com/share?url=https://www.bellanaija.com/2018/08/tolani-baj-lists-nigerian-underground-artists-way-better-mainstream-artists-new-vlog-bn-tv/&text=Tolani+Baj+lists+Nigerian+%E2%80%9Cunderground+artists+way+better+than+mainstream+artists%E2%80%9D+in+New+Vlog+%7C+BN+TV" target="_blank"><img title="Twitter" alt="Twitter" width="30" height="30" src="https://www.bellanaija.com/wp-content/plugins/bn-social-buttons/buttons/simple/twitter.png" /></a></li><li><a class="crafty-social-button csb-google" href="https://plus.google.com/share?url=https://www.bellanaija.com/2018/08/tolani-baj-lists-nigerian-underground-artists-way-better-mainstream-artists-new-vlog-bn-tv/" target="_blank"><img title="Google" alt="Google" width="30" height="30" src="https://www.bellanaija.com/wp-content/plugins/bn-social-buttons/buttons/simple/google.png" /></a></li><li><a class="crafty-social-button csb-pinterest" href='javascript:void((function()%7Bvar%20e=document.createElement(&apos;script&apos;);e.setAttribute(&apos;type&apos;,&apos;text/javascript&apos;);e.setAttribute(&apos;charset&apos;,&apos;UTF-8&apos;);e.setAttribute(&apos;src&apos;,&apos;https://assets.pinterest.com/js/pinmarklet.js?r=&apos;+Math.random()*99999999);document.body.appendChild(e)%7D)());'><img title="Pinterest" alt="Pinterest" width="30" height="30" src="https://www.bellanaija.com/wp-content/plugins/bn-social-buttons/buttons/simple/pinterest.png" /></a></li><li><a class="crafty-social-button csb-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.bellanaija.com/2018/08/tolani-baj-lists-nigerian-underground-artists-way-better-mainstream-artists-new-vlog-bn-tv/&title=Tolani+Baj+lists+Nigerian+%26%238220%3Bunderground+artists+way+better+than+mainstream+artists%26%238221%3B+in+New+Vlog+%7C+BN+TV" target="_blank"><img title="LinkedIn" alt="LinkedIn" width="30" height="30" src="https://www.bellanaija.com/wp-content/plugins/bn-social-buttons/buttons/simple/linkedin.png" /></a></li></ul></div></div></div><div class="clear-left"></div><p class="entry-meta"><span class="entry-tags">Tagged With: <a href="https://www.bellanaija.com/tag/1da-banton/" rel="tag">1da Banton</a>, <a href="https://www.bellanaija.com/tag/bn-tv/" rel="tag">BN TV</a>, <a href="https://www.bellanaija.com/tag/boj/" rel="tag">boj</a>, <a href="https://www.bellanaija.com/tag/buju/" rel="tag">Buju</a>, <a href="https://www.bellanaija.com/tag/damilare/" rel="tag">Damilare</a>, <a href="https://www.bellanaija.com/tag/demmie-vee/" rel="tag">Demmie Vee</a>, <a href="https://www.bellanaija.com/tag/hameed-idowu/" rel="tag">Hameed Idowu</a>, <a href="https://www.bellanaija.com/tag/minz/" rel="tag">Minz</a>, <a href="https://www.bellanaija.com/tag/terry-apala/" rel="tag">Terry Apala</a>, <a href="https://www.bellanaija.com/tag/tolani-baj/" rel="tag">Tolani Baj</a>, <a href="https://www.bellanaija.com/tag/tomi-agape/" rel="tag">Tomi Agape</a>, <a href="https://www.bellanaija.com/tag/tomi-thomas/" rel="tag">Tomi Thomas</a>, <a href="https://www.bellanaija.com/tag/wurld/" rel="tag">Wurld</a></span><span class="entry-categories">Filed Under: <a href="https://www.bellanaija.com/bntv/" rel="category tag">BN TV</a>, <a href="https://www.bellanaija.com/music/" rel="category tag">Music</a></span></p><section id="custom_html-4" class="widget_text widget widget_custom_html"><div class="widget_text widget-wrap"><div class="textwidget custom-html-widget">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="b2085231c2b526f8dde945f0-text/javascript"></script> <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-1554058024407090" data-ad-slot="6506616767"></ins>
+        <script type="b2085231c2b526f8dde945f0-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></section></footer></article><div class="adjacent-entry-pagination pagination"><div class="pagination-previous alignleft"><a href="https://www.bellanaija.com/2018/08/pvcitizen-now-16-days/" rel="prev">&#x000AB; #PVCitizen: You now have 16 Days!</a></div><div class="pagination-next alignright"></div></div><div id="comments"><ul id="commentlist"><li class="depth-1 with-avatar" id="response-cont"><div class="comment-title">Post a comment</div><div id="respond" class="comment-body"><form action="https://www.bellanaija.com/wp-comments-post.php" method="post" id="comment-form"><fieldset><div class="comment-author-avatar"> <a href="https://gravatar.com/site/login" title="Change Your Avatar"><img alt='' src='https://secure.gravatar.com/avatar/?s=64&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/?s=128&#038;d=identicon&#038;r=g 2x' class='avatar avatar-64 photo avatar-default' height='64' width='64' /></a></div><div class="comment-form-row"> <label for="author">Name</label> <input type="text" name="author" id="author" value="" size="30" tabindex="1" class="vital" /></div><div class="comment-form-row"> <label for="email">Email</label> <input type="text" name="email" id="email" value="" size="30" tabindex="2" class="vital" /></div><div class="comment-form-row"> <label for="url">Website</label> <input type="text" name="url" id="url" value="" size="30" tabindex="3" /></div><div class="textarea-border"><textarea name="comment" id="comment" cols="50" rows="3" tabindex="4" class="vital"></textarea></div><div class="comment-buttons"> <input name="submit" type="submit" tabindex="5" value="Post your comment" class="submit" /> <a rel="nofollow" id="cancel-comment-reply-link" href="/2018/08/tolani-baj-lists-nigerian-underground-artists-way-better-mainstream-artists-new-vlog-bn-tv/#respond" style="display:none;">Cancel reply</a></div><input type="hidden" name="comment_post_ID" value="1203476" /><input type='hidden' name='comment_post_ID' value='1203476' id='comment_post_ID' /> <input type='hidden' name='comment_parent' id='comment_parent' value='0' /><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="815462553d" /></p><textarea name="more_comment" style="display: none;"></textarea><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="42" /></p></fieldset></form></div></li></ul><div id="comment-pagination"></div></div><div style='text-align: center'><section id="text-134" class="widget widget_text"><div class="widget-wrap"><div class="textwidget">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="b2085231c2b526f8dde945f0-text/javascript"></script> <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-1554058024407090" data-ad-slot="6673441962"></ins>
+        <script type="b2085231c2b526f8dde945f0-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></section></div><div class="clear-both"></div></div><div id="archive-sidebar"><section id="search-5" class="widget widget_search"><div class="widget-wrap"><form class="search-form" itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction" method="get" action="https://www.bellanaija.com/" role="search"><meta itemprop="target" content="https://www.bellanaija.com/?s={s}" /><input itemprop="query-input" type="search" name="s" placeholder="Search this website &#x2026;" /><input type="submit" value="Search" /></form></div></section><section id="text-176" class="widget widget_text"><div class="widget-wrap"><div class="textwidget">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="b2085231c2b526f8dde945f0-text/javascript"></script> <ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-1554058024407090" data-ad-slot="2243242360"></ins>
+        <script type="b2085231c2b526f8dde945f0-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></section><section id="text-152" class="widget widget_text"><div class="widget-wrap"><div class="textwidget"><div id='div-gpt-ad-1489737748863-0' style='height:250px; width:300px;'>
+        <script type="b2085231c2b526f8dde945f0-text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1489737748863-0'); });</script> </div></div></div></section><section id="text-144" class="widget widget_text"><div class="widget-wrap"><div class="textwidget"><div id='div-gpt-ad-1489738117157-0' style='height:250px; width:300px;'>
+        <script type="b2085231c2b526f8dde945f0-text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1489738117157-0'); });</script> </div></div></div></section><section id="text-154" class="widget widget_text"><div class="widget-wrap"><div class="textwidget"><div id="div-gpt-ad-1489738293904-0" style="height: 250px; width: 300px;">
+        <script type="b2085231c2b526f8dde945f0-text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1489738293904-0'); });</script></div></div></div></section><section id="text-200" class="widget widget_text"><div class="widget-wrap"><div class="textwidget"><div id='div-gpt-ad-1501253036607-0' style='height:250px; width:300px;'>
+        <script type="b2085231c2b526f8dde945f0-text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1501253036607-0'); });</script> </div></div></div></section><section id="text-158" class="widget widget_text"><div class="widget-wrap"><div class="textwidget"><div id='div-gpt-ad-1489738418732-0' style='height:250px; width:300px;'>
+        <script type="b2085231c2b526f8dde945f0-text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1489738418732-0'); });</script> </div></div></div></section><section id="text-169" class="widget widget_text"><div class="widget-wrap"><div class="textwidget"><div id='div-gpt-ad-1495609418518-0' style='height:250px; width:300px;'>
+        <script type="b2085231c2b526f8dde945f0-text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1495609418518-0'); });</script> </div></div></div></section><section id="text-136" class="widget widget_text"><div class="widget-wrap"><div class="textwidget">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="b2085231c2b526f8dde945f0-text/javascript"></script> <ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-1554058024407090" data-ad-slot="6533841161"></ins>
+        <script type="b2085231c2b526f8dde945f0-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></section><section id="bn_star_features-2" class="widget widget_bn_star_features"><div class="widget-wrap"><h4 class="widget-title widgettitle">Star Features</h4><div id="star-features"><ul><li> <span> <a href="https://www.bellanaija.com/tag/beinspired-mondays"> <img width="135" height="85" src="https://www.bellanaija.com/wp-content/uploads/2017/12/IK-Nwosu-600x900-135x85.jpg" class="attachment-bn-top-trends size-bn-top-trends" alt="" /> </a> </span><p> <a href="https://www.bellanaija.com/tag/beinspired-mondays" class="star-feature-title">#BeInspired Mondays</a></p></li><li> <span> <a href="https://www.bellanaija.com/tag/nkem-says"> <img width="135" height="85" src="https://www.bellanaija.com/wp-content/uploads/2018/07/IP_4385a-462x600-2-135x85.jpg" class="attachment-bn-top-trends size-bn-top-trends" alt="" /> </a> </span><p> <a href="https://www.bellanaija.com/tag/nkem-says" class="star-feature-title">Nkem Says</a></p></li><li> <span> <a href="https://www.bellanaija.com/tag/akanna-okeke"> <img width="135" height="85" src="https://www.bellanaija.com/wp-content/uploads/2018/07/IMG-20140811-WA004-600x450-1-600x450-3-135x85.jpg" class="attachment-bn-top-trends size-bn-top-trends" alt="" /> </a> </span><p> <a href="https://www.bellanaija.com/tag/akanna-okeke" class="star-feature-title">Akanna Okeke</a></p></li><li> <span> <a href="https://www.bellanaija.com/tag/talking-law-with-ivie-omoregie"> <img width="135" height="85" src="https://www.bellanaija.com/wp-content/uploads/2018/08/IMG_5795-1-600x400-135x85.jpg" class="attachment-bn-top-trends size-bn-top-trends" alt="" /> </a> </span><p> <a href="https://www.bellanaija.com/tag/talking-law-with-ivie-omoregie" class="star-feature-title">Talking Law with Ivie</a></p></li><li> <span> <a href="https://www.bellanaija.com/tag/money-matters-with-nimi"> <img width="135" height="85" src="https://www.bellanaija.com/wp-content/uploads/2018/08/dreamstime_m_693348-400x600-1-135x85.jpg" class="attachment-bn-top-trends size-bn-top-trends" alt="" /> </a> </span><p> <a href="https://www.bellanaija.com/tag/money-matters-with-nimi" class="star-feature-title">Money Matters with Nimi</a></p></li><li> <span> <a href="https://www.bellanaija.com/tag/bn-prose"> <img width="135" height="85" src="https://www.bellanaija.com/wp-content/uploads/2018/08/The-SilverCoin-Series-135x85.jpg" class="attachment-bn-top-trends size-bn-top-trends" alt="" /> </a> </span><p> <a href="https://www.bellanaija.com/tag/bn-prose" class="star-feature-title">BN Prose</a></p></li><li> <span> <a href="https://www.bellanaija.com/tag/bn-making-it"> <img width="135" height="85" src="https://www.bellanaija.com/wp-content/uploads/2017/10/3-5-135x85.jpg" class="attachment-bn-top-trends size-bn-top-trends" alt="" /> </a> </span><p> <a href="https://www.bellanaija.com/tag/bn-making-it" class="star-feature-title">BN Making It!</a></p></li><li> <span> <a href="https://www.bellanaija.com/tag/bn-confession-box"> <img width="135" height="85" src="https://www.bellanaija.com/wp-content/uploads/2018/07/dreamstime_m_913852-423x600-1-135x85.jpg" class="attachment-bn-top-trends size-bn-top-trends" alt="" /> </a> </span><p> <a href="https://www.bellanaija.com/tag/bn-confession-box" class="star-feature-title">BN Confession Box</a></p></li><li> <span> <a href="https://www.bellanaija.com/tag/aunty-bella"> <img width="135" height="85" src="https://www.bellanaija.com/wp-content/uploads/2018/03/dreamstime_m_29661240-600x399-1-135x85.jpg" class="attachment-bn-top-trends size-bn-top-trends" alt="" /> </a> </span><p> <a href="https://www.bellanaija.com/tag/aunty-bella" class="star-feature-title">Aunty Bella</a></p></li><li> <span> <a href="https://www.bellanaija.com/tag/asoebibella"> <img width="135" height="85" src="https://www.bellanaija.com/wp-content/uploads/2018/08/aso_ebi-asoebi-asoebibella20.AsoEbiBella-in-dresses-by-@Sarabellcoutureng-Photo-Credit-@klalaphotography-135x85.jpg" class="attachment-bn-top-trends size-bn-top-trends" alt="" /> </a> </span><p> <a href="https://www.bellanaija.com/tag/asoebibella" class="star-feature-title">#AsoEbiBella</a></p></li><li> <span> <a href="https://www.bellanaija.com/tag/bn-cuisine"> <img width="135" height="85" src="https://www.bellanaija.com/wp-content/uploads/2018/08/maxresdefault-2-3-135x85.jpg" class="attachment-bn-top-trends size-bn-top-trends" alt="" /> </a> </span><p> <a href="https://www.bellanaija.com/tag/bn-cuisine" class="star-feature-title">BN Cuisine</a></p></li><li> <span> <a href="https://www.bellanaija.com/tag/real-weddings"> <img width="135" height="85" src="https://www.bellanaija.com/wp-content/uploads/2018/08/Boma-Soji-BellaNaija-Weddings-47-135x85.jpg" class="attachment-bn-top-trends size-bn-top-trends" alt="" /> </a> </span><p> <a href="https://www.bellanaija.com/tag/real-weddings" class="star-feature-title">BN Weddings</a></p></li><li> <span> <a href="https://www.bellanaija.com/tag/pick-your-fave"> <img width="135" height="85" src="https://www.bellanaija.com/wp-content/uploads/2018/06/OG-Okonkwo-Zina-Anumudu-are-Twinning-in-This-Style-Temple-Dress-bellanaija-style-135x85.jpg" class="attachment-bn-top-trends size-bn-top-trends" alt="" /> </a> </span><p> <a href="https://www.bellanaija.com/tag/pick-your-fave" class="star-feature-title">BN Pick Your Fave</a></p></li><li> <span> <a href="https://www.bellanaija.com/tag/bn-red-carpet-fab"> <img width="135" height="85" src="https://www.bellanaija.com/wp-content/uploads/2018/08/Nominee-Cocktail-2018-Africa-Magic-Viewers’-Choice-Awards-BellaNaija73-135x85.jpg" class="attachment-bn-top-trends size-bn-top-trends" alt="" /> </a> </span><p> <a href="https://www.bellanaija.com/tag/bn-red-carpet-fab" class="star-feature-title">BN Red Carpet Fab</a></p></li></ul><div class="clear"></div></div><div class="clear"></div></div></section><section class="widget widget_text"><div class="widget-wrap"><h4 class="widget-title widgettitle"><strong>Isoken is now available for online viewing on Amazon</strong></h4><div class="textwidget"> <a href="https://www.amazon.com/Isoken-Dakore-Akande/dp/B07FM8WD74/ref=sr_1_1?s=instant-video&ie=UTF8&qid=1532964564&sr=1-1&keywords=isoken+the+movie" rel="nofollow" target="_blank"> <img width="234" height="60" src="https://www.bellanaija.com/wp-content/uploads/2018/07/Isoken234x60.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" /> </a></div></div></section><section class="widget widget_text"><div class="widget-wrap"><h4 class="widget-title widgettitle"><strong>Affordable State-of-the-Art diagnostic center in Yenagoa</strong></h4><div class="textwidget"> <a href="http://Www.bayelsadiagnostic.com" rel="nofollow" target="_blank"> <img width="234" height="60" src="https://www.bellanaija.com/wp-content/uploads/2018/08/unnamed-2.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" /> </a></div></div></section><section id="text-131" class="widget widget_text"><div class="widget-wrap"><div class="textwidget">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="b2085231c2b526f8dde945f0-text/javascript"></script> <ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-1554058024407090" data-ad-slot="3874657969"></ins>
+        <script type="b2085231c2b526f8dde945f0-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></section><section id="featured-post-4" class="widget featured-content featuredpost"><div class="widget-wrap"><h4 class="widget-title widgettitle">Recent Posts</h4><article class="post-1203476 post type-post status-publish format-standard has-post-thumbnail category-bntv category-music tag-1da-banton tag-bn-tv tag-boj tag-buju tag-damilare tag-demmie-vee tag-hameed-idowu tag-minz tag-terry-apala tag-tolani-baj tag-tomi-agape tag-tomi-thomas tag-wurld entry"><a href="https://www.bellanaija.com/2018/08/tolani-baj-lists-nigerian-underground-artists-way-better-mainstream-artists-new-vlog-bn-tv/" class="alignright" aria-hidden="true"><img width="64" height="64" src="https://www.bellanaija.com/wp-content/uploads/2018/08/tolani-baj-64x64.jpg" class="entry-image attachment-post" alt="Tolani Baj lists Nigerian &#8220;underground artists way better than mainstream artists&#8221; in New Vlog | BN TV" itemprop="image" /></a><header class="entry-header"><h2 class="entry-title" itemprop="headline"><a href="https://www.bellanaija.com/2018/08/tolani-baj-lists-nigerian-underground-artists-way-better-mainstream-artists-new-vlog-bn-tv/">Tolani Baj lists Nigerian &#8220;underground artists way better than mainstream artists&#8221; in New Vlog | BN TV</a></h2></header></article><article class="post-1203495 post type-post status-publish format-standard has-post-thumbnail category-features category-news tag-pvcitizen tag-2019-elections tag-independent-national-electoral-commission-inec tag-permanent-voters-card-pvc tag-pvc entry"><a href="https://www.bellanaija.com/2018/08/pvcitizen-now-16-days/" class="alignright" aria-hidden="true"><img width="64" height="64" src="https://www.bellanaija.com/wp-content/uploads/2018/08/WhatsApp-Image-2018-08-15-at-3.10.08-PM-64x64.jpeg" class="entry-image attachment-post" alt="#PVCitizen: You now have 16 Days!" itemprop="image" /></a><header class="entry-header"><h2 class="entry-title" itemprop="headline"><a href="https://www.bellanaija.com/2018/08/pvcitizen-now-16-days/">#PVCitizen: You now have 16 Days!</a></h2></header></article><article class="post-1191864 post type-post status-publish format-standard has-post-thumbnail category-features tag-mike-hunder tag-productive-habits entry"><a href="https://www.bellanaija.com/2018/08/mike-hunder-how-to-change-your-habits-in-6-practical-steps/" class="alignright" aria-hidden="true"><img width="64" height="64" src="https://www.bellanaija.com/wp-content/uploads/2018/08/dreamstime_m_119021426-600x399-1-600x399-64x64.jpg" class="entry-image attachment-post" alt="Mike Hunder: How To Change Your Habits in 6 Practical Steps" itemprop="image" /></a><header class="entry-header"><h2 class="entry-title" itemprop="headline"><a href="https://www.bellanaija.com/2018/08/mike-hunder-how-to-change-your-habits-in-6-practical-steps/">Mike Hunder: How To Change Your Habits in 6 Practical Steps</a></h2></header></article><article class="post-1203451 post type-post status-publish format-standard has-post-thumbnail category-career category-features category-inspired category-news tag-bellanaijawcw tag-ayoronke-tosin-yeye tag-bellanaija-woman-crush-wednesday tag-imentorafrica entry"><a href="https://www.bellanaija.com/2018/08/bellanaijawcw-ayoronke-tosin-yeye-imentorafrica-helping-africans-connect-mentors-online/" class="alignright" aria-hidden="true"><img width="64" height="64" src="https://www.bellanaija.com/wp-content/uploads/2018/08/Ayoronke-Tosin-Yeye-64x64.jpeg" class="entry-image attachment-post" alt="How #BellaNaijaWCW Ayoronke Tosin-Yeye of IMentorAfrica is Helping Africans connect with Mentors Online" itemprop="image" /></a><header class="entry-header"><h2 class="entry-title" itemprop="headline"><a href="https://www.bellanaija.com/2018/08/bellanaijawcw-ayoronke-tosin-yeye-imentorafrica-helping-africans-connect-mentors-online/">How #BellaNaijaWCW Ayoronke Tosin-Yeye of IMentorAfrica is Helping Africans connect with Mentors Online</a></h2></header></article><article class="post-1203465 post type-post status-publish format-standard has-post-thumbnail category-music tag-iris-gold tag-m-anifest tag-roll-it-out entry"><a href="https://www.bellanaija.com/2018/08/new-video-iris-gold-feat-m-anifest-roll/" class="alignright" aria-hidden="true"><img width="64" height="64" src="https://www.bellanaija.com/wp-content/uploads/2018/08/iris-gold-roll-it-up-64x64.jpg" class="entry-image attachment-post" alt="New Video: Iris Gold feat. M.anifest &#8211; Roll It Out" itemprop="image" /></a><header class="entry-header"><h2 class="entry-title" itemprop="headline"><a href="https://www.bellanaija.com/2018/08/new-video-iris-gold-feat-m-anifest-roll/">New Video: Iris Gold feat. M.anifest &#8211; Roll It Out</a></h2></header></article><article class="post-1203468 post type-post status-publish format-standard has-post-thumbnail category-news tag-church-money tag-daystar-christian-centre tag-daystar-christian-centre-dcc tag-sam-adeyemi entry"><a href="https://www.bellanaija.com/2018/08/watch-sam-adeyemi-churches-supposed-church-money/" class="alignright" aria-hidden="true"><img width="64" height="64" src="https://www.bellanaija.com/wp-content/uploads/2018/08/Sam-Adeyemi-64x64.jpg" class="entry-image attachment-post" alt="WATCH: Sam Adeyemi on What Churches are Supposed to Do with &#8220;church money&#8221;" itemprop="image" /></a><header class="entry-header"><h2 class="entry-title" itemprop="headline"><a href="https://www.bellanaija.com/2018/08/watch-sam-adeyemi-churches-supposed-church-money/">WATCH: Sam Adeyemi on What Churches are Supposed to Do with &#8220;church money&#8221;</a></h2></header></article><article class="post-1203464 post type-post status-publish format-standard has-post-thumbnail category-bntv category-news tag-cigarette tag-tobacco tag-tobacco-sales entry"><a href="https://www.bellanaija.com/2018/08/stop-tobacco-sales-kids-health-ministry-says-new-video/" class="alignright" aria-hidden="true"><img width="64" height="64" src="https://www.bellanaija.com/wp-content/uploads/2018/08/Stop-Tobacco-sales-to-Kids-64x64.jpg" class="entry-image attachment-post" alt="Stop Tobacco Sales to Kids, Health Ministry says in New Video" itemprop="image" /></a><header class="entry-header"><h2 class="entry-title" itemprop="headline"><a href="https://www.bellanaija.com/2018/08/stop-tobacco-sales-kids-health-ministry-says-new-video/">Stop Tobacco Sales to Kids, Health Ministry says in New Video</a></h2></header></article><article class="post-1203448 post type-post status-publish format-standard has-post-thumbnail category-event category-weddings tag-a-plus-drinks tag-barcode-cocktails tag-bellanaija-weddings tag-chef-fregz tag-cinematics-ng tag-civic-centre-etal-events tag-coco-ribbon tag-dj-obi-ajent tag-elite-living tag-gideon-hermosa tag-gigshire tag-helado-delicia tag-honey-frosting tag-ice-box-nig tag-innovative-media tag-invulnerable-security tag-joks-pepper-konsult tag-kellas-world-graphics tag-kfa-events tag-laurent-perrier tag-radedph tag-saffron-delights tag-sara-o-events tag-sauce-factory tag-sugar-weddings tag-sweet-cravings-desserts tag-syden-interactive tag-tash-bistro tag-the-chops-factory tag-tyj-photography entry"><a href="https://www.bellanaija.com/2018/08/gideon-hermosa-holds-masterclass/" class="alignright" aria-hidden="true"><img width="64" height="64" src="https://www.bellanaija.com/wp-content/uploads/2018/08/event-one-64x64.jpg" class="entry-image attachment-post" alt="World Renowned Events Stylist, Gideon Hermosa is set to hold first Masterclass in Lagos | August 20th-21st" itemprop="image" /></a><header class="entry-header"><h2 class="entry-title" itemprop="headline"><a href="https://www.bellanaija.com/2018/08/gideon-hermosa-holds-masterclass/">World Renowned Events Stylist, Gideon Hermosa is set to hold first Masterclass in Lagos | August 20th-21st</a></h2></header></article><article class="post-1203407 post type-post status-publish format-standard has-post-thumbnail category-event tag-aceberg tag-chizzylon tag-cozy-miller tag-dj-consequence tag-do2dtun tag-femi-silva tag-google tag-milly-k tag-muri-okunola tag-ola-boy tag-slim-case tag-solidstar tag-tecno-mobile tag-tecno-spark-2 entry"><a href="https://www.bellanaija.com/2018/08/solidstar-thrills-fans-tecnospark/" class="alignright" aria-hidden="true"><img width="64" height="64" src="https://www.bellanaija.com/wp-content/uploads/2018/08/tecno11-64x64.jpg" class="entry-image attachment-post" alt="Solidstar, Slimcase, DJ Consequence thrill guests at Tecno’s Spark Party" itemprop="image" /></a><header class="entry-header"><h2 class="entry-title" itemprop="headline"><a href="https://www.bellanaija.com/2018/08/solidstar-thrills-fans-tecnospark/">Solidstar, Slimcase, DJ Consequence thrill guests at Tecno’s Spark Party</a></h2></header></article><article class="post-1203387 post type-post status-publish format-standard has-post-thumbnail category-scoop tag-drug-overdose tag-e-ejnyc tag-ejnyc tag-lyric-leigh entry"><a href="https://www.bellanaija.com/2018/08/pregnant-ejnyc-star-lyric-leigh-found-dead-suspected-drug-overdose/" class="alignright" aria-hidden="true"><img width="64" height="64" src="https://www.bellanaija.com/wp-content/uploads/2018/08/lyric-leigh-64x64.jpg" class="entry-image attachment-post" alt="Pregnant EJNYC Star Lyric Leigh found dead from Suspected Drug Overdose" itemprop="image" /></a><header class="entry-header"><h2 class="entry-title" itemprop="headline"><a href="https://www.bellanaija.com/2018/08/pregnant-ejnyc-star-lyric-leigh-found-dead-suspected-drug-overdose/">Pregnant EJNYC Star Lyric Leigh found dead from Suspected Drug Overdose</a></h2></header></article></div></section><section id="text-201" class="widget widget_text"><div class="widget-wrap"><div class="textwidget"><ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 500px;" data-ad-client="ca-pub-1554058024407090" data-ad-slot="4152043178"></ins>
+        <script type="b2085231c2b526f8dde945f0-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></section><section id="recent-comments-4" class="widget widget_recent_comments"><div class="widget-wrap"><h4 class="widget-title widgettitle">Recent Comments</h4><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Ephi</span> on <a href="https://www.bellanaija.com/2018/08/toke-makinwa-launches-skincare-brand-glow-tm/#comment-2355598">Toke Makinwa launches &#8216;Glow by TM&#8217; | A Global Skincare Brand</a></li><li class="recentcomments"><span class="comment-author-link">MM</span> on <a href="https://www.bellanaija.com/2018/08/toke-makinwa-launches-skincare-brand-glow-tm/#comment-2355596">Toke Makinwa launches &#8216;Glow by TM&#8217; | A Global Skincare Brand</a></li><li class="recentcomments"><span class="comment-author-link">seriously</span> on <a href="https://www.bellanaija.com/2018/08/dolapo-oni-shares-experience-working-new-mum-new-vlog-watch-bn-tv/#comment-2355594">Dolapo Oni shares her Experience as a Working New Mum in New Vlog | Watch on BN TV</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://bellanaija' rel='external nofollow' class='url'>abby</a></span> on <a href="https://www.bellanaija.com/2018/08/dolapo-oni-shares-experience-working-new-mum-new-vlog-watch-bn-tv/#comment-2355593">Dolapo Oni shares her Experience as a Working New Mum in New Vlog | Watch on BN TV</a></li><li class="recentcomments"><span class="comment-author-link">Rrrrrrr</span> on <a href="https://www.bellanaija.com/2018/08/folake-and-demola-say-i-do-to-foreverlove-together-fxd18/#comment-2355592">It is You and I, Always! BBNWonderland Bride Folake and Prince Charming Demola&#8217;s Wedding #FXD18</a></li></ul></div></section><section id="text-190" class="widget widget_text"><div class="widget-wrap"><div class="textwidget">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="b2085231c2b526f8dde945f0-text/javascript"></script> <ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-1554058024407090" data-ad-slot="5063418768"></ins>
+        <script type="b2085231c2b526f8dde945f0-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></section><section id="bn_movie_week-5" class="widget widget_bn_movie_week"><div class="widget-wrap"><h4 class="widget-title widgettitle">Movie of The Week</h4><div id="tune-day"> <a href="https://www.bellanaija.com/2018/07/bnmoviefeature-odunlade-adekola-special-watch-jide-kosoko-bimbo-oshin-moji-afolayan-mufu-olosha-oko/"> <img width="300" height="250" src="https://www.bellanaija.com/wp-content/uploads/2018/07/maxresdefault-18-300x250.jpg" class="attachment-bn-banner-size size-bn-banner-size" alt="" /> </a><p> <a href="https://www.bellanaija.com/2018/07/bnmoviefeature-odunlade-adekola-special-watch-jide-kosoko-bimbo-oshin-moji-afolayan-mufu-olosha-oko/" class="tune-day-title">#BNMovieFeature Odunlade Adekola Special: WATCH Jide Kosoko, Bimbo Oshin, Moji Afolayan in &#8216;Mufu Olosha Oko&#8217;</a></p><div class="clear"></div></div></div></section><div class="clear-both"></div></div><div class="clear-both"></div></main></div>
+    </div><footer class="site-footer" itemscope itemtype="https://schema.org/WPFooter"><div class="wrap"><img src="//www.bellanaija.com/wp-content/themes/diamonds/images/bellanaija-horizontal.png" alt="Bella Naija" /><div class="creds"><p>&#x000A9;&nbsp;2018 Bella Naija. All rights reserved| <a href="/about/">About Us</a> | <a href="/team/">The Team</a> | <a href="/copyright/">Copyright</a> | <a href="/terms-and-conditions/">Terms And Conditions</a> | <a href="/privacy-policy/">Privacy Policy</a></p></div></div></footer>
+    <script src="https://mint.bellanaija.pagenanny.net/?js" type="b2085231c2b526f8dde945f0-text/javascript"></script> </div><img alt='css.php' src="https://www.bellanaija.com/wp-content/plugins/cookies-for-comments/css.php?k=fb284d34e45da8d163ffe3279845d535&amp;o=i&amp;t=410741718" width='1' height='1' /><div id="shiftnav-toggle-main" class="shiftnav-toggle shiftnav-toggle-shiftnav-main shiftnav-toggle-main-align-center shiftnav-toggle-edge-left shiftnav-toggle-icon-x shiftnav-toggle-main-align-center shiftnav-toggle-edge-left shiftnav-toggle-icon-x" data-shiftnav-target="shiftnav-main"> <span class="shiftnav-main-toggle-content-before"><span id="bn-mobile-menu" style="position: relative; top: 15px; font-size: 80%;">MENU</span></span> <span class="shiftnav-main-toggle-content shiftnav-toggle-main-block"><img src="//www.bellanaija.com/wp-content/themes/diamonds/images/bn-tiny.png" alt="BellaNaija" /></span></div><div class="shiftnav shiftnav-nojs shiftnav-left-edge shiftnav-skin-dark-red shiftnav-transition-standard" id="shiftnav-main" data-shiftnav-id="shiftnav-main"><div class="shiftnav-inner"><div class="shiftnav-menu-image shiftnav-menu-image-padded" id="shiftnav-menu-image-shiftnav-main"> <img width="630" height="146" src="https://www.bellanaija.com/wp-content/uploads/2017/04/bellanaija-horizontal.png" class="attachment-full size-full" alt="" /></div><nav class="shiftnav-nav"><ul id="menu-header-1" class="shiftnav-menu shiftnav-targets-default shiftnav-targets-text-default shiftnav-targets-icon-default shiftnav-indent-subs"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-401458 shiftnav-depth-0 shiftnav-has-icon"><a class="shiftnav-target" href="https://www.bellanaija.com" itemprop="url"><i class="shiftnav-icon fa fa-home"></i><span class="shiftnav-target-text">Home</span></a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-958630 shiftnav-depth-0 shiftnav-has-icon"><a class="shiftnav-target" href="https://www.bellanaija.com/scoop/" itemprop="url"><i class="shiftnav-icon fa fa-lightbulb-o"></i><span class="shiftnav-target-text">Scoop</span></a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-958629 shiftnav-depth-0 shiftnav-has-icon"><a class="shiftnav-target" href="https://www.bellanaija.com/bntv/" itemprop="url"><i class="shiftnav-icon fa fa-film"></i><span class="shiftnav-target-text">BN TV</span></a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401469 shiftnav-depth-0 shiftnav-has-icon"><a class="shiftnav-target" href="https://www.bellanaija.com/weddings/" itemprop="url"><i class="shiftnav-icon fa fa-bell-o"></i><span class="shiftnav-target-text">Weddings</span></a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401466 shiftnav-depth-0 shiftnav-has-icon"><a class="shiftnav-target" href="https://www.bellanaija.com/news/" itemprop="url"><i class="shiftnav-icon fa fa-bullhorn"></i><span class="shiftnav-target-text">News</span></a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1140863 shiftnav-depth-0"><a class="shiftnav-target" href="https://www.bellanaija.com/event/" itemprop="url">Events</a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-983729 shiftnav-depth-0"><a class="shiftnav-target" href="https://www.bellanaija.com/comedy/" itemprop="url">Comedy</a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-401465 shiftnav-depth-0 shiftnav-has-icon"><a class="shiftnav-target" href="https://www.bellanaija.com/music/" itemprop="url"><i class="shiftnav-icon fa fa-music"></i><span class="shiftnav-target-text">Music</span></a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401470 shiftnav-depth-0 shiftnav-has-icon"><a class="shiftnav-target" href="https://www.bellanaija.com/features/" itemprop="url"><i class="shiftnav-icon fa fa-pencil-square-o"></i><span class="shiftnav-target-text">Features</span></a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401464 shiftnav-depth-0 shiftnav-has-icon"><a class="shiftnav-target" href="https://www.bellanaija.com/movies-tv/" itemprop="url"><i class="shiftnav-icon fa fa-video-camera"></i><span class="shiftnav-target-text">Movies &#038; TV</span></a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401468 shiftnav-depth-0 shiftnav-has-icon"><a class="shiftnav-target" href="https://www.bellanaija.com/style/" itemprop="url"><i class="shiftnav-icon fa fa-star"></i><span class="shiftnav-target-text">Style</span></a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401459 shiftnav-depth-0 shiftnav-has-icon"><a class="shiftnav-target" href="https://www.bellanaija.com/beauty/" itemprop="url"><i class="shiftnav-icon fa fa-user"></i><span class="shiftnav-target-text">Beauty</span></a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401467 shiftnav-depth-0 shiftnav-has-icon"><a class="shiftnav-target" href="https://www.bellanaija.com/relationships/" itemprop="url"><i class="shiftnav-icon fa fa-heart"></i><span class="shiftnav-target-text">Relationships</span></a></li><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-958628 shiftnav-sub-shift shiftnav-depth-0"><a class="shiftnav-target" href="#!" itemprop="url">More</a><span class="shiftnav-submenu-activation"><i class="fa fa-chevron-right"></i></span><ul class="sub-menu sub-menu-1"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401460 shiftnav-depth-1 shiftnav-has-icon"><a class="shiftnav-target" href="https://www.bellanaija.com/career/" itemprop="url"><i class="shiftnav-icon fa fa-bar-chart-o"></i><span class="shiftnav-target-text">Career</span></a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-401463 shiftnav-depth-1 shiftnav-has-icon"><a class="shiftnav-target" href="https://www.bellanaija.com/living/" itemprop="url"><i class="shiftnav-icon fa fa-stethoscope"></i><span class="shiftnav-target-text">Living</span></a></li><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-402773 shiftnav-depth-1 shiftnav-has-icon"><a class="shiftnav-target" href="https://www.bellanaija.com/inspired/" itemprop="url"><i class="shiftnav-icon fa fa-check-square-o"></i><span class="shiftnav-target-text">Inspired!</span></a></li><li class="shiftnav-retract"><a class="shiftnav-target"><i class="fa fa-chevron-left"></i> Back</a></li></ul></li></ul></nav></div></div>
+    <script src="https://optanon.blob.core.windows.net/consent/4de4602d-1daa-4a52-aecd-d1d974cf3e71.js" type="b2085231c2b526f8dde945f0-text/javascript" charset="UTF-8"></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">function OptanonWrapper() { }</script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">
+        var _qevents = _qevents || [];
+
+                    (function() {
+                        var elem = document.createElement('script');
+                        elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+                        elem.async = true;
+                        elem.type = "text/javascript";
+                        var scpt = document.getElementsByTagName('script')[0];
+                        scpt.parentNode.insertBefore(elem, scpt);
+                    })();
+
+                    _qevents.push({
+                        qacct:"p-FAVpteMmCK_ze",
+                        source:"wp"
+                    });</script> <noscript><div style="display:none;"> <img src="//pixel.quantserve.com/pixel/p-FAVpteMmCK_ze.gif" border="0" height="1" width="1" alt="Quantcast" /></div> </noscript>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">/* <![CDATA[ */ var specQuoteLn = {"button_text":"Quote","quote_button":"","quote_select":"1","quote_target":".hentry"}; /* ]]> */</script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript" src='https://www.bellanaija.com/wp-content/cache/busting/1/wp-content/plugins/bn-comments/js/quote.min-1.0.3.js'></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript" src='https://www.bellanaija.com/wp-content/cache/busting/1/wp-content/plugins/bn-comments/js/jquery.autogrow-textarea.min-1.04.js'></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript" src='https://www.bellanaija.com/wp-content/cache/busting/1/wp-includes/js/jquery/jquery.form.min-4.2.1.js'></script> <!--[if lt IE 8]> <script type='text/javascript' src='https://www.bellanaija.com/wp-includes/js/json2.min.js?ver=2015-05-03'></script> <![endif]-->
+    <script type="b2085231c2b526f8dde945f0-text/javascript" src='https://www.bellanaija.com/wp-content/cache/busting/1/wp-content/plugins/bn-comments/js/jquery.scrollTo-1.4.2-min-1.4.2.js'></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">/* <![CDATA[ */ var commentingL10n = {"tb_show":"Show trackbacks","tb_hide":"Hide trackbacks","rpl_hide_2":"Hide %count% replies to %name%'s comment","rpl_show_2":"View %count% replies to %name%'s comment","rpl_hide_1":"Hide the reply to %name%'s comment","rpl_show_1":"View the reply to %name%'s comment","tb_from":"Trackback from: %s","err_txt_mis":"Missing some fields","unknown":"Unknown commenter","order":"asc","polling":"30","update":"0","time":"2018-08-15 16:43:41","post_id":"1203476","ajax_url":"https:\/\/www.bellanaija.com\/","nest_depth":"3","max_depth":"5"}; /* ]]> */</script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript" src='https://www.bellanaija.com/wp-content/cache/busting/1/wp-content/plugins/bn-comments/js/commenting.min-1.0.3.js'></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript" src='https://www.bellanaija.com/wp-includes/js/mediaelement/wp-mediaelement.min.js'></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript" src='https://www.bellanaija.com/wp-content/cache/min/1/wp-content/plugins/cue/assets/js/wp-mediaelement-c308c74a7787ec3b1deabca50ecd6ee0.js' data-minify="1"></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">/* <![CDATA[ */ var shiftnav_data = {"shift_body":"off","lock_body":"on","lock_body_x":"off","swipe_close":"on","swipe_open":"off","swipe_tolerance_x":"150","swipe_tolerance_y":"60","swipe_edge_proximity":"80","open_current":"off","collapse_accordions":"off","scroll_panel":"on"}; /* ]]> */</script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript" src='https://www.bellanaija.com/wp-content/cache/min/1/wp-content/plugins/shiftnav-pro/assets/js/shiftnav-8ee0ba41dedd17c4592de3a653a0fd6c.js' data-minify="1"></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript" src='https://www.bellanaija.com/wp-content/cache/min/1/wp-content/plugins/wp-banners/js/wp-banners-8b60205f908063e95ddc0f0075a00610.js' data-minify="1"></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript" src='https://www.bellanaija.com/wp-content/cache/min/1/wp-content/plugins/wp-banners/js/jquery-periodic-b718874e47995b48018b4e1cae339c4b.js' data-minify="1"></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript" src='https://www.bellanaija.com/wp-includes/js/wp-embed.min.js'></script>
+    <script async="async" type="b2085231c2b526f8dde945f0-text/javascript" src='https://www.bellanaija.com/wp-content/cache/min/1/wp-content/plugins/akismet/_inc/form-26a9ba92a48bab49942db37b4ca6cc93.js' data-minify="1"></script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">
+        (function(w, d){
+            var b = d.getElementsByTagName("body")[0];
+            var s = d.createElement("script"); s.async = true;
+            var v = !("IntersectionObserver" in w) ? "8.7.1" : "10.5.2";
+            s.src = "https://www.bellanaija.com/wp-content/plugins/wp-rocket/inc/front/js/lazyload-" + v + ".min.js";
+            w.lazyLoadOptions = {
+                elements_selector: "img, iframe",
+                data_src: "lazy-src",
+                data_srcset: "lazy-srcset",
+                skip_invisible: false,
+                class_loading: "lazyloading",
+                class_loaded: "lazyloaded",
+                threshold: 300,
+                callback_load: function(element) {
+                    if ( element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible" ) {
+                        if (element.classList.contains("lazyloaded") ) {
+                            if (typeof window.jQuery != "undefined") {
+                                if (jQuery.fn.fitVids) {
+                                    jQuery(element).parent().fitVids();
+                                }
+                            }
+                        }
+                    }
+                }
+            }; // Your options here. See "recipes" for more information about async.
+            b.appendChild(s);
+        }(window, document));
+
+        // Listen to the Initialized event
+        window.addEventListener('LazyLoad::Initialized', function (e) {
+            // Get the instance and puts it in the lazyLoadInstance variable
+            var lazyLoadInstance = e.detail.instance;
+
+            var observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    lazyLoadInstance.update();
+                } );
+            } );
+
+            var b      = document.getElementsByTagName("body")[0];
+            var config = { childList: true, subtree: true };
+
+            observer.observe(b, config);
+        }, false);</script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">function lazyLoadThumb(e){var t='<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',a='<div class="play"></div>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="https://www.youtube.com/embed/ID?autoplay=1";e.setAttribute("src",t.replace("ID",this.dataset.id)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),this.parentNode.replaceChild(e,this)}document.addEventListener("DOMContentLoaded",function(){var e,t,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.innerHTML=lazyLoadThumb(a[t].dataset.id),e.onclick=lazyLoadYoutubeIframe,a[t].appendChild(e)});</script>
+    <script type="b2085231c2b526f8dde945f0-text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"d985f92355","applicationID":"128855439","transactionName":"Ml1aMUdXWkZYUBYIDAsXeQZBX1tbFkALDwQJXQ==","queueTime":0,"applicationTime":221,"atts":"HhpZRw9NSUg=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/2448a7bd/cloudflare-static/rocket-loader.min.js" data-cf-nonce="b2085231c2b526f8dde945f0-" defer=""></script>
 </body>
 </html>

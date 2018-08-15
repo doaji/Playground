@@ -1,10 +1,45 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+﻿// Nigeriana
+{
+  "MainContent": "content-main",
+  "MainAttributeName": "id",
+  "AddElements": [
+    {
+      "Tag": "div",
+      "ID": "post-feat-img",
+      "AttributeName": "id"
+    }
+  ],
+  "RemoveElements": [
+    {
+      "Tag": "div",
+      "ID": "mvp-org-wrap",
+      "AttributeName": "class"
+    },
+        {
+      "Tag": "div",
+      "ID": "post-tags",
+      "AttributeName": "class"
+    },
+        {
+      "Tag": "div",
+      "ID": "mvp-related-posts left relative",
+      "AttributeName": "class"
+    },
+    {
+      "Tag": "div",
+      "ID": "article-ad",
+      "AttributeName": "id"
+    }
+    ,
+        {
+      "Tag": "div",
+      "ID": "comments-button",
+      "AttributeName": "id"
+    }    ,
+        {
+      "Tag": "div",
+      "ID": "comments",
+      "AttributeName": "id"
+    }
+  ]
+}

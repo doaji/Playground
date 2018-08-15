@@ -38,10 +38,13 @@ namespace ClassLibrary1
             var maincontent = doc.DocumentNode.Descendants().FirstOrDefault(x => x.Attributes[data.MainAttributeName]?.Value == data.MainContent);
             if (maincontent!=null)
             {
+                // remove all scripts
+                maincontent.Descendants().Where(x => x.Name == "script").ToList().ForEach(x => x.Remove());
                 // remove all unwanted elements
                 foreach (var item in data.RemoveElements)
                 {
-                    maincontent.Descendants().Where(x => x.Name == item.Tag && x.Attributes[item.AttributeName]?.Value == item.ID).ToList().ForEach(x=>x.Remove());
+                    var xx = maincontent.Descendants().Where(x => x.Name == item.Tag && x.Attributes[item.AttributeName]?.Value == item.ID).ToList();
+                    xx.ForEach(x=>x.Remove());
                 }
 
                 // add elements

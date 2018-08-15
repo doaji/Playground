@@ -1,10 +1,30 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+﻿{
+  "MainContent": "shortcode-content",
+  "MainAttributeName": "class",
+  "AddElements": [
+    {
+      "Tag": "img",
+      "ID": "image-border",
+      "AttributeName": "class"
+    }
+  ],
+  "RemoveElements": [
+    {
+      "Tag": "div",
+      "ID": "column3",
+      "AttributeName": "class"
+    },
+    {
+      "Tag": "div",
+      "ID": "wp-polls",
+      "AttributeName": "class"
+    }
+    ,
+    {
+      "Tag": "div",
+      "ID": "share-block right",
+      "AttributeName": "class"
+    }
+  ]
+}
 
-</body>
-</html>

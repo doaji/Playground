@@ -116,6 +116,22 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="RssJsonFiles\BellaNaija.json" />
+    <Content Include="RssJsonFiles\ChannelsTV.json" />
+    <Content Include="RssJsonFiles\HowNG.json" />
+    <Content Include="RssJsonFiles\InformationNG.json" />
+    <Content Include="RssJsonFiles\LailasBlog.json" />
+    <Content Include="RssJsonFiles\Naij.json" />
+    <Content Include="RssJsonFiles\NaijaPose.json" />
+    <Content Include="RssJsonFiles\Nigeriana.json" />
+    <Content Include="RssJsonFiles\PostNigeria.json" />
+    <Content Include="RssJsonFiles\Pulse.json" />
+    <Content Include="RssJsonFiles\Punch.json" />
+    <Content Include="RssJsonFiles\SaharaReporters.json" />
+    <Content Include="RssJsonFiles\Today.json" />
+    <Content Include="RssJsonFiles\Tori.json" />
+    <Content Include="RssJsonFiles\Vanguard.json" />
+    <Content Include="RssJsonFiles\YNaija.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -126,6 +142,22 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <None Include="rssFilterJson.json" />
+    <Content Include="RssOutputPages\BellaNaija.aspx" />
+    <Content Include="RssOutputPages\ChannelsTV.aspx" />
+    <Content Include="RssOutputPages\HowNG.aspx" />
+    <Content Include="RssOutputPages\InformationNG.aspx" />
+    <Content Include="RssOutputPages\LailasBlog.aspx" />
+    <Content Include="RssOutputPages\Naij.aspx" />
+    <Content Include="RssOutputPages\NaijaPose.aspx" />
+    <Content Include="RssOutputPages\Nigeriana.aspx" />
+    <Content Include="RssOutputPages\PostNigeria.aspx" />
+    <Content Include="RssOutputPages\Pulse.aspx" />
+    <Content Include="RssOutputPages\Punch.aspx" />
+    <Content Include="RssOutputPages\SaharaReporters.aspx" />
+    <Content Include="RssOutputPages\Today.aspx" />
+    <Content Include="RssOutputPages\Tori.aspx" />
+    <Content Include="RssOutputPages\Vanguard.aspx" />
+    <Content Include="RssOutputPages\YNaija.aspx" />
     <Content Include="RSSParseOutPut.aspx" />
     <Content Include="RSSParseTest.html" />
     <Content Include="RssTestPages\BellaNaija.html" />
@@ -153,6 +185,118 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RssOutputPages\BellaNaija.aspx.cs">
+      <DependentUpon>BellaNaija.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RssOutputPages\BellaNaija.aspx.designer.cs">
+      <DependentUpon>BellaNaija.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RssOutputPages\ChannelsTV.aspx.cs">
+      <DependentUpon>ChannelsTV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RssOutputPages\ChannelsTV.aspx.designer.cs">
+      <DependentUpon>ChannelsTV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RssOutputPages\HowNG.aspx.cs">
+      <DependentUpon>HowNG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RssOutputPages\HowNG.aspx.designer.cs">
+      <DependentUpon>HowNG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RssOutputPages\InformationNG.aspx.cs">
+      <DependentUpon>InformationNG.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RssOutputPages\InformationNG.aspx.designer.cs">
+      <DependentUpon>InformationNG.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RssOutputPages\LailasBlog.aspx.cs">
+      <DependentUpon>LailasBlog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RssOutputPages\LailasBlog.aspx.designer.cs">
+      <DependentUpon>LailasBlog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RssOutputPages\Naij.aspx.cs">
+      <DependentUpon>Naij.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RssOutputPages\Naij.aspx.designer.cs">
+      <DependentUpon>Naij.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RssOutputPages\NaijaPose.aspx.cs">
+      <DependentUpon>NaijaPose.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RssOutputPages\NaijaPose.aspx.designer.cs">
+      <DependentUpon>NaijaPose.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RssOutputPages\Nigeriana.aspx.cs">
+      <DependentUpon>Nigeriana.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RssOutputPages\Nigeriana.aspx.designer.cs">
+      <DependentUpon>Nigeriana.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RssOutputPages\PostNigeria.aspx.cs">
+      <DependentUpon>PostNigeria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RssOutputPages\PostNigeria.aspx.designer.cs">
+      <DependentUpon>PostNigeria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RssOutputPages\Pulse.aspx.cs">
+      <DependentUpon>Pulse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RssOutputPages\Pulse.aspx.designer.cs">
+      <DependentUpon>Pulse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RssOutputPages\Punch.aspx.cs">
+      <DependentUpon>Punch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RssOutputPages\Punch.aspx.designer.cs">
+      <DependentUpon>Punch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RssOutputPages\SaharaReporters.aspx.cs">
+      <DependentUpon>SaharaReporters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RssOutputPages\SaharaReporters.aspx.designer.cs">
+      <DependentUpon>SaharaReporters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RssOutputPages\Today.aspx.cs">
+      <DependentUpon>Today.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RssOutputPages\Today.aspx.designer.cs">
+      <DependentUpon>Today.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RssOutputPages\Tori.aspx.cs">
+      <DependentUpon>Tori.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RssOutputPages\Tori.aspx.designer.cs">
+      <DependentUpon>Tori.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RssOutputPages\Vanguard.aspx.cs">
+      <DependentUpon>Vanguard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RssOutputPages\Vanguard.aspx.designer.cs">
+      <DependentUpon>Vanguard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RssOutputPages\YNaija.aspx.cs">
+      <DependentUpon>YNaija.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RssOutputPages\YNaija.aspx.designer.cs">
+      <DependentUpon>YNaija.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RSSParseOutPut.aspx.cs">
       <DependentUpon>RSSParseOutPut.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -164,7 +308,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="RssJsonFiles\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
