@@ -12,8 +12,8 @@ namespace WebApplication2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string content = File.ReadAllText(@"C:\Users\radia\Source\Workspaces\Local\PlayGround\Playground\WebApplication2\RSSParseTest.html");
-            string filter = File.ReadAllText(@"C:\Users\radia\Source\Workspaces\Local\PlayGround\Playground\WebApplication2\rssFilterJson.json");
+            string content = File.ReadAllText(Request.MapPath("RSSParseTest.html"));
+            string filter = File.ReadAllText(Request.MapPath("rssFilterJson.json"));
            OutputLabel.Text= ClassLibrary1.RSSParser.Parser(content, filter);
         }
     }
