@@ -26,7 +26,7 @@ namespace ClassLibrary1
             public List<ElementFilterDefinition> AddElements { get; set; } = new List<ElementFilterDefinition>();
             public List<ElementFilterDefinition> RemoveElements { get; set; } = new List<ElementFilterDefinition>();
         }
-        // sample syntax: [maincontent:_content_]|[content:+_content/-_content_/+_content][images:/+_image_src_/-_image_src]
+        
         public static string Parser(string content,string filter)
         {
             var data = Newtonsoft.Json.JsonConvert.DeserializeObject<FilterContainer>(filter);

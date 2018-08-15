@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -127,6 +128,22 @@
     <None Include="rssFilterJson.json" />
     <Content Include="RSSParseOutPut.aspx" />
     <Content Include="RSSParseTest.html" />
+    <Content Include="RssTestPages\BellaNaija.html" />
+    <Content Include="RssTestPages\ChannelsTV.html" />
+    <Content Include="RssTestPages\HowNG.html" />
+    <Content Include="RssTestPages\InformationNG.html" />
+    <Content Include="RssTestPages\LailasBlog.html" />
+    <Content Include="RssTestPages\Naij.html" />
+    <Content Include="RssTestPages\NaijaPose.html" />
+    <Content Include="RssTestPages\Nigeriana.html" />
+    <Content Include="RssTestPages\PostNigeria.html" />
+    <Content Include="RssTestPages\Pulse.html" />
+    <Content Include="RssTestPages\Punch.html" />
+    <Content Include="RssTestPages\SaharaReporters.html" />
+    <Content Include="RssTestPages\Today.html" />
+    <Content Include="RssTestPages\Tori.html" />
+    <Content Include="RssTestPages\Vanguard.html" />
+    <Content Include="RssTestPages\YNaija.html" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
@@ -147,6 +164,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="RssJsonFiles\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
@@ -169,7 +187,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>8732</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:8732/</IISUrl>
+          <IISUrl>http://localhost:8731/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
