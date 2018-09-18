@@ -16,6 +16,35 @@ namespace CodeWars
             Console.WriteLine(Divisors(16).Select(x => x.ToString()).Aggregate((x, y) => x + " " + y));
         }
 
+        public static int DuplicateCount(string str)
+        {
+            if (string.IsNullOrWhiteSpace(str))
+            {
+                return 0;
+            }
+            else
+            {
+                var characters = str.ToLower().ToCharArray();
+                var results = characters.GroupBy(x => x).Where(x => x.Count() > 1);
+                return results.Count();
+            }
+            return -1;
+        }
+
+        public static int Test(string numbers)
+        {
+            //Your code is here...
+            var converts = numbers.Split(' ').Where(x => !string.IsNullOrWhiteSpace(x)).Select(x => int.Parse(x));
+            int[] results = new int[converts.Count()];
+            for (int i = 0; i < results.Length; i++)
+            {
+                results[i] = converts.ElementAt(i) % 2 == 0 ? 1 : 0;
+            }
+            var grouped = results.GroupBy(x => x);
+            var answer = grouped.OrderBy(x => x.Count()).First().Key;
+            return Array.FindIndex(results, x => x == answer) + 1;
+        }
+
         //public static string Decode(string morseCode)
         //{
         //    string result = "";
