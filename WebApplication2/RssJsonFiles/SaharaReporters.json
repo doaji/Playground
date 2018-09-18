@@ -1,10 +1,12 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+﻿// Sahara
+{
+  "MainContent": "story-content",
+  "MainAttributeName": "class",
+  "RemoveElements": [
+    {
+      "Tag": "div",
+      "ID": "clearfix after-story-ad-wrapper",
+      "AttributeName": "class"
+    }
+  ]
+}

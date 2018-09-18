@@ -1,10 +1,12 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+﻿// Tori
+{
+  "MainContent": "mycase4_reader",
+  "MainAttributeName": "class",
+    "RemoveElements": [
+    {
+      "Tag": "ins",
+      "ID": "adsbygoogle",
+      "AttributeName": "class"
+    }
+  ]
+}

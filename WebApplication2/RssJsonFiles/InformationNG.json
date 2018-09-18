@@ -1,10 +1,17 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+﻿// INformationNG
+{
+  "MainContent": "single-box clearfix entry-content",
+  "MainAttributeName": "class",
+  "RemoveElements": [
+    {
+      "Tag": "div",
+      "ID": "quads-location quads-ad4",
+      "AttributeName": "class"
+    },
+    {
+      "Tag": "div",
+      "ID": "jp-relatedposts",
+      "AttributeName": "class"
+    }
+  ]
+}

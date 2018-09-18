@@ -1,10 +1,27 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+﻿//Today
+{
+  "MainContent": "td-post-content",
+  "MainAttributeName": "class",
+  "RemoveElements": [
+    {
+      "Tag": "div",
+      "ID": "float:none;margin:0px;",
+      "AttributeName": "style"
+    },
+    {
+      "Tag": "div",
+      "ID": "td-g-rec td-g-rec-id-content_bottom td_uid_44_5b7313d6bef0d_rand td_block_template_11",
+      "AttributeName": "class"
+    },
+    {
+      "Tag": "iframe",
+      "ID": "wppas_zone",
+      "AttributeName": "id"
+    },
+        {
+      "Tag": "ins",
+      "ID": "adsbygoogle",
+      "AttributeName": "class"
+    }
+  ]
+}

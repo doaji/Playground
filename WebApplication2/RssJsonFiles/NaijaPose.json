@@ -1,10 +1,47 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+﻿// NaijaPose
+{
+  "MainContent": "tm_middle_post_content",
+  "MainAttributeName": "class",
+  "RemoveElements": [
+    {
+      "Tag": "div",
+      "ID": "tm_item_post",
+      "AttributeName": "class"
+    },
+    {
+      "Tag": "div",
+      "ID": "bottomcontainerBox",
+      "AttributeName": "class"
+    },
+    {
+      "Tag": "div",
+      "ID": "sharedaddy sd-sharing-enabled",
+      "AttributeName": "class"
+    },
+    {
+      "Tag": "div",
+      "ID": "jp-relatedposts",
+      "AttributeName": "class"
+    },
+    {
+      "Tag": "div",
+      "ID": "share_post",
+      "AttributeName": "class"
+    },
+    {
+      "Tag": "div",
+      "ID": "post_tags",
+      "AttributeName": "class"
+    },
+    {
+      "Tag": "div",
+      "ID": "author_post",
+      "AttributeName": "class"
+    },
+    {
+      "Tag": "div",
+      "ID": "comment-respond",
+      "AttributeName": "class"
+    }
+  ]
+}

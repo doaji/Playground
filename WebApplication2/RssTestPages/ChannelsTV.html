@@ -1,10 +1,528 @@
-﻿<!DOCTYPE html>
-<html>
+﻿
+<!DOCTYPE html>
+<html xmlns="//www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <link rel="shortcut icon" href="//www.channelstv.com/wp-content/themes/channels2016/images/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <script type="c5968e20c5bad238416e6c44-text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQAEWFFWARAFV1JSAQQHUA=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(20),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{h?h-=1:o(c||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:s.now();i("err",[t,n])}var i=t("handle"),a=t(21),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",h=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(13),t(12),"addEventListener"in window&&t(6),s.xhrWrappable&&t(14),d=!0)}c.on("fn-start",function(t,e,n){d&&(h+=1)}),c.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),c.on("fn-end",function(){d&&!this.thrown&&h>0&&(h-=1)}),c.on("internal-error",function(t){i("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){M++,S=y.hash,this[u]=b.now()}function o(){M--,y.hash!==S&&i(0,!0);var t=b.now();this[l]=~~this[l]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+y,e])}function a(t,e){t.on(e,function(){this[e]=b.now()})}var c="-start",s="-end",f="-body",u="fn"+c,d="fn"+s,p="cb"+c,h="cb"+s,l="jsTime",m="fetch",v="addEventListener",w=window,y=w.location,b=t("loader");if(w[v]&&b.xhrWrappable){var g=t(10),x=t(11),E=t(8),P=t(6),O=t(13),R=t(7),T=t(14),L=t(9),j=t("ee"),N=j.get("tracer");t(15),b.features.spa=!0;var S,M=0;j.on(u,r),j.on(p,r),j.on(d,o),j.on(h,o),j.buffer([u,d,"xhr-done","xhr-resolved"]),P.buffer([u]),O.buffer(["setTimeout"+s,"clearTimeout"+c,u]),T.buffer([u,"new-xhr","send-xhr"+c]),R.buffer([m+c,m+"-done",m+f+c,m+f+s]),E.buffer(["newURL"]),g.buffer([u]),x.buffer(["propagate",p,h,"executor-err","resolve"+c]),N.buffer([u,"no-"+u]),L.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+c),a(j,"xhr-resolved"),a(j,"xhr-done"),a(R,m+c),a(R,m+"-done"),a(L,"new-jsonp"),a(L,"jsonp-end"),a(L,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,M>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),c=t(12),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",h="-start",l="-end",m="fn"+h,v="fn"+l,w="bstTimer",y="pushState",b=t("loader");b.features.stn=!0,t(8);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=b.now())}),o.on(v,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,b.now()])}),a.on(m,function(t,e,n){this.bstStart=b.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),this.bstType])}),c.on(m,function(){this.bstStart=b.now()}),c.on(v,function(t,e){i(w,[e,this.bstStart,b.now(),"requestAnimationFrame"])}),o.on(y+h,function(t){this.time=b.now(),this.startPath=location.pathname+location.hash}),o.on(y+l,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(23)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=r.apply(this,arguments);return o.emit(n+"start",arguments,t),t.then(function(e){return o.emit(n+"end",[null,e],t),e},function(e){throw o.emit(n+"end",[e],t),e})})}var o=t("ee").get("fetch"),i=t(20);e.exports=o;var a=window,c="fetch-",s=c+"body-",f=["arrayBuffer","blob","json","text","formData"],u=a.Request,d=a.Response,p=a.fetch,h="prototype";u&&d&&p&&(i(f,function(t,e){r(u[h],e,s),r(d[h],e,s)}),r(a,"fetch",c),o.on(c+"end",function(t,e){var n=this;e?e.clone().arrayBuffer().then(function(t){n.rxSize=t.byteLength,o.emit(c+"done",[null,e],n)}):o.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t(23)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){s.emit("jsonp-error",[],p),s.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=c(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),s.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function c(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var s=t("ee").get("jsonp"),f=t(23)(s);if(e.exports=s,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,h=["appendChild","insertBefore","replaceChild"];f.inPlace(HTMLElement.prototype,h,"dom-"),f.inPlace(HTMLHeadElement.prototype,h,"dom-"),f.inPlace(HTMLBodyElement.prototype,h,"dom-"),s.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t(23)(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=c(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t(23),a=t("ee").get("promise"),c=i(a),s=t(20),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;s(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),c=f.resolve(i);return c}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),s(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=c(t[0],"resolve-",this),t[1]=c(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),c.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=c(t[0],"cb-",this),t[1]=c(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t(23)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(23)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",c)}function i(t){b.push(t),l&&(x?x.then(a):v?v(a):(E=-E,P.data=E))}function a(){for(var t=0;t<b.length;t++)r([],b[t]);b.length&&(b=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t(23)(u),p=NREUM.o,h=p.XHR,l=p.MO,m=p.PR,v=p.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],b=[];e.exports=u;var g=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(h,g),g.prototype=h.prototype,d.inPlace(g.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),l){var x=m&&m.resolve();if(!v&&!m){var E=1,P=document.createTextNode(E);new l(a).observe(P,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=a.now()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return l(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(16),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,p=t("id"),h=t(19),l=t(18),m=window.XMLHttpRequest;a.features.xhr=!0,t(14),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=l(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<d;c++)e.addEventListener(u[c],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)})}},{}],16:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],17:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(20),c=t(21),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var l=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(h+"tracer",[f.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){l[e]=o(h+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],21:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],22:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],23:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(21),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),c=l(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([b,n,r,a]),a}}function h(t,e){w[t]=l(t).concat(e)}function l(t){return w[t]||[]}function m(t){return d[t]=d[t]||o(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var w={},y={},b={on:h,emit:n,get:m,listeners:l,context:e,buffer:v,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var c="nr@context",s=t("gos"),f=t(20),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!x++){var t=g.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),s("mark",["onload",a()+g.offset],null,"api");var n=p.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===p.readyState&&i()}function i(){s("mark",["domContent",a()+g.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-g.offset}var c=(new Date).getTime(),s=t("handle"),f=t(20),u=t("ee"),d=window,p=d.document,h="addEventListener",l="attachEvent",m=d.XMLHttpRequest,v=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var w=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1071.min.js"},b=m&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:c,now:a,origin:w,features:{},xhrWrappable:b};t(17),p[h]?(p[h]("DOMContentLoaded",i,!1),d[h]("load",r,!1)):(p[l]("onreadystatechange",o),d[l]("onload",r)),s("mark",["firstbyte",c],null,"api");var x=0,E=t(22)},{}]},{},["loader",2,15,5,3,4]);</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="google-site-verification" content="6JVFjvtKtlBAOBeZjx02KYOCAJqmYfH--9_EmfNIsw8" />
+    <meta name="alexaVerifyID" content="s6Y-9oImS488Fgxe-Oc84mxGsd8" />
+    <meta name="msvalidate.01" content="51A9C00FE7BE8C94DDAE034F74141D4A" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-itunes-app" content="app-id=674628071">
+    <meta name="theme-color" content="#00265E">
+    <meta name="msapplication-navbutton-color" content="#00265E">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="//www.channelstv.com/wp-content/themes/manifest.json">
+    <meta name="application-name" content="Channels Television" />
+    <meta name="msapplication-square70x70logo" content="small.jpg" />
+    <meta name="msapplication-square150x150logo" content="medium.jpg" />
+    <meta name="msapplication-wide310x150logo" content="wide.jpg" />
+    <meta name="msapplication-square310x310logo" content="large.jpg" />
+    <meta name="msapplication-TileColor" content="#00265E" />
+    <script type="c5968e20c5bad238416e6c44-text/javascript">
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                      })(window,document,'script','dataLayer','GTM-T36X8P');</script>  <!--[if lt IE 9]> <script src="js/html5shiv.js"></script> <script src="js/respond.min.js"></script> <![endif]-->
+    <style type="text/css">
+        .post-categories {
+            padding: 0;
+        }
+
+        ol, ul {
+            padding: 0;
+        }
+
+        ol {
+            margin-left: 20px;
+            list-style: disc;
+        }
+
+            ol li {
+                padding-bottom: 10px;
+            }
+    </style>
+    <script type="c5968e20c5bad238416e6c44-text/javascript">(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+    <title>FG Vows To End Killings, Says &#039;Every Nigerian Life Matters&#039; &bull; Channels Television</title>
+    <meta name="description" content="The Federal Government is committed to addressing the nation’s security challenges and ensuring that the perpetrators of killings in parts of the country are brought to justice..." />
+    <link rel="canonical" href="https://www.channelstv.com/2018/08/15/fg-working-to-completely-subdue-bloodshed-perpetrators-says-osinbajo/" />
+    <link rel="publisher" href="https://plus.google.com/+ChannelsTelevision" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="FG Vows To End Killings, Says &#039;Every Nigerian Life Matters&#039; &bull; Channels Television" />
+    <meta property="og:description" content="The Federal Government is committed to addressing the nation’s security challenges and ensuring that the perpetrators of killings in parts of the country are brought to justice..." />
+    <meta property="og:url" content="https://www.channelstv.com/2018/08/15/fg-working-to-completely-subdue-bloodshed-perpetrators-says-osinbajo/" />
+    <meta property="og:site_name" content="Channels Television" />
+    <meta property="article:publisher" content="https://www.facebook.com/channelsforum" />
+    <meta property="article:tag" content="Killings" />
+    <meta property="article:tag" content="Yemi Osinbajo" />
+    <meta property="article:tag" content="Zamfara" />
+    <meta property="article:section" content="Headlines" />
+    <meta property="article:published_time" content="2018-08-15T08:31:30+01:00" />
+    <meta property="article:modified_time" content="2018-08-15T16:04:02+01:00" />
+    <meta property="og:updated_time" content="2018-08-15T16:04:02+01:00" />
+    <meta property="fb:app_id" content="194146653930801" />
+    <meta property="og:image" content="https://www.channelstv.com/wp-content/uploads/2018/08/Yemi-Osinbajo1.jpg" />
+    <meta property="og:image:secure_url" content="https://www.channelstv.com/wp-content/uploads/2018/08/Yemi-Osinbajo1.jpg" />
+    <meta property="og:image:width" content="650" />
+    <meta property="og:image:height" content="350" />
+    <meta property="og:image:alt" content="FG Working To Completely Subdue Bloodshed Perpetrators, Says Osinbajo" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="The Federal Government is committed to addressing the nation’s security challenges and ensuring that the perpetrators of killings in parts of the country are brought to justice..." />
+    <meta name="twitter:title" content="FG Vows To End Killings, Says &#039;Every Nigerian Life Matters&#039; &bull; Channels Television" />
+    <meta name="twitter:site" content="@channelstv" />
+    <meta name="twitter:image" content="https://www.channelstv.com/wp-content/uploads/2018/08/Yemi-Osinbajo1.jpg" />
+    <meta name="twitter:creator" content="@channelstv" />
+    <script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"Organization","url":"https:\/\/www.channelstv.com\/","sameAs":["https:\/\/www.facebook.com\/channelsforum","https:\/\/instagram.com\/channelstelevision","https:\/\/www.linkedin.com\/company\/channels-television","https:\/\/plus.google.com\/+ChannelsTelevision","https:\/\/www.youtube.com\/user\/channelsweb","https:\/\/twitter.com\/channelstv"],"@id":"https:\/\/www.channelstv.com\/#organization","name":"Channels Television","logo":"http:\/\/www.channelstv.com\/wp-content\/uploads\/2014\/06\/channelstv-logo1.png"}</script>
+    <link rel="amphtml" href="https://www.channelstv.com/2018/08/15/fg-working-to-completely-subdue-bloodshed-perpetrators-says-osinbajo/amp/" />
+    <link rel='dns-prefetch' href='//s7.addthis.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel="alternate" type="application/rss+xml" title="Channels Television &raquo; Feed" href="https://www.channelstv.com/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Channels Television &raquo; Comments Feed" href="https://www.channelstv.com/comments/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Channels Television &raquo; FG Vows To End Killings, Says &#8216;Every Nigerian Life Matters&#8217; Comments Feed" href="https://www.channelstv.com/2018/08/15/fg-working-to-completely-subdue-bloodshed-perpetrators-says-osinbajo/feed/" />
+    <style type="text/css">
+        img.wp-smiley, img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='jquery.prettyphoto-css' href='https://www.channelstv.com/wp-content/plugins/wp-video-lightbox/css/prettyPhoto.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='video-lightbox-css' href='https://www.channelstv.com/wp-content/plugins/wp-video-lightbox/wp-video-lightbox.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='fonts_css-css' href='https://www.channelstv.com/wp-content/themes/channels2016/css/maxcdn.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='bootstrap_css-css' href='https://www.channelstv.com/wp-content/themes/channels2016/css/bootstrap.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='main_css-css' href='https://www.channelstv.com/wp-content/themes/channels2016/css/russia-2018.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='worldcup_css-css' href='https://www.channelstv.com/wp-content/themes/channels2016/css/live-worldcup-v11.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='twentyfifteen-style-css' href='https://www.channelstv.com/wp-content/themes/channels2016/style.css' type='text/css' media='all' />
+    <style id='twentyfifteen-style-inline-css' type='text/css'>
+        .post-navigation .nav-previous {
+            background-image: url(https://www.channelstv.com/wp-content/uploads/2018/08/US-Embassy.jpg);
+        }
+
+            .post-navigation .nav-previous .post-title, .post-navigation .nav-previous a:hover .post-title, .post-navigation .nav-previous .meta-nav {
+                color: #fff;
+            }
+
+            .post-navigation .nav-previous a:before {
+                background-color: rgba(0,0,0,.4);
+            }
+
+        .post-navigation .nav-next {
+            background-image: url(https://www.channelstv.com/wp-content/uploads/2018/08/South-Korea-Moon-Jae-in.jpg);
+            border-top: 0;
+        }
+
+            .post-navigation .nav-next .post-title, .post-navigation .nav-next a:hover .post-title, .post-navigation .nav-next .meta-nav {
+                color: #fff;
+            }
+
+            .post-navigation .nav-next a:before {
+                background-color: rgba(0,0,0,.4);
+            }
+    </style>
+    <script type="c5968e20c5bad238416e6c44-text/javascript" src='https://www.channelstv.com/wp-content/cache/busting/1/wp-includes/js/jquery/jquery-1.12.4.js'></script>
+    <script type="c5968e20c5bad238416e6c44-text/javascript" src='https://www.channelstv.com/wp-content/cache/busting/1/wp-includes/js/jquery/jquery-migrate.min-1.4.1.js'></script>
+    <script type="c5968e20c5bad238416e6c44-text/javascript" src='https://www.channelstv.com/wp-content/cache/busting/1/wp-content/plugins/wp-video-lightbox/js/jquery.prettyPhoto.min-3.1.6.js'></script>
+    <script type="c5968e20c5bad238416e6c44-text/javascript">/* <![CDATA[ */ var vlpp_vars = {"prettyPhoto_rel":"wp-video-lightbox","animation_speed":"fast","slideshow":"5000","autoplay_slideshow":"false","opacity":"0.80","show_title":"true","allow_resize":"true","allow_expand":"true","default_width":"640","default_height":"480","counter_separator_label":"\/","theme":"pp_default","horizontal_padding":"20","hideflash":"false","wmode":"opaque","autoplay":"false","modal":"false","deeplinking":"false","overlay_gallery":"true","overlay_gallery_max":"30","keyboard_shortcuts":"true","ie6_fallback":"true"}; /* ]]> */</script>
+    <script type="c5968e20c5bad238416e6c44-text/javascript" src='https://www.channelstv.com/wp-content/cache/busting/1/wp-content/plugins/wp-video-lightbox/js/video-lightbox-3.1.6.js'></script>
+    <link rel='https://api.w.org/' href='https://www.channelstv.com/wp-json/' />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.channelstv.com/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.channelstv.com/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 4.9.2" />
+    <link rel='shortlink' href='https://www.channelstv.com/?p=351288' />
+    <script type="c5968e20c5bad238416e6c44-text/javascript">
+        WP_VIDEO_LIGHTBOX_VERSION="1.8.5";
+                    WP_VID_LIGHTBOX_URL="https://www.channelstv.com/wp-content/plugins/wp-video-lightbox";
+                                function wpvl_paramReplace(name, string, value) {
+                        // Find the param with regex
+                        // Grab the first character in the returned string (should be ? or &)
+                        // Replace our href string with our new value, passing on the name and delimeter
+
+                        var re = new RegExp("[\?&]" + name + "=([^&#]*)");
+                        var matches = re.exec(string);
+                        var newString;
+
+                        if (matches === null) {
+                            // if there are no params, append the parameter
+                            newString = string + '?' + name + '=' + value;
+                        } else {
+                            var delimeter = matches[0].charAt(0);
+                            newString = string.replace(re, delimeter + name + "=" + value);
+                        }
+                        return newString;
+                    }</script>
+    <style type="text/css">
+        .recentcomments a {
+            display: inline !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    </style>
+    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js' type="c5968e20c5bad238416e6c44-text/javascript"></script>
+    <script type="c5968e20c5bad238416e6c44-text/javascript">
+        var googletag = googletag || {};
+          googletag.cmd = googletag.cmd || [];</script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="c5968e20c5bad238416e6c44-text/javascript"></script>
+    <script type="c5968e20c5bad238416e6c44-text/javascript">
+        (adsbygoogle = window.adsbygoogle || []).push({
+                        google_ad_client: "ca-pub-8675631753543209",
+                        enable_page_level_ads: true
+                      });</script>
+    <style>
+        .small-screen-from-group {
+            width: 100%;
+        }
+
+        .small-form-control {
+            font-size: 20px !important;
+        }
+    </style>
 </head>
 <body>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T36X8P"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <div class="grid_default wrap_header" role="banner"><div class="header-group"><div class="site-header js-scroll-header"><div class="container-gutter"><div class="container" aria-label="Primary" role="navigaton"><div class="row"><div class="col-lg-12"><p class="site-header-item site-header-item_brand"> <span class="is-hidden" aria-hidden="true">CHANNELS TELEVISION</span> <a class="site-logo" href="/"> <img id="js-brand-logo" class="img-responsive svg-fallback" alt="Channels Television" src="//www.channelstv.com/wp-content/themes/channels2016/channels-logo.png"> </a></p><div class="site-header-item"><ul class="nav-bar nav-bar_collapse01"><li><a href="//www.channelstv.com/live">LIVE TV</a></li><li><a href="//www.channelstv.com/programmes/">PROGRAMMES</a></li><li><a href="//www.channelstv.com/top-videos/">TOP VIDEOS</a></li><li class="visible-xs-block"><a class="election-highlight" href="//www.channelstv.com/bookclub/">BOOK CLUB</a></li><li class="visible-xs-block"> <button class="js-toggle btn btn_alt btn_md btn_site-menu" data-togglecontrols="{" toggleClass":"is-open","selector":".dropdown_site-nav", "activateTarget" true}"> <i class="fa fa-bars" aria-hidden="true"></i> </button></li></ul></div><div class="site-header-item pull-right js-scroll-navbar"><ul class="nav-bar nav-bar_collapse02"><li><a href="https://www.channelstv.com/aboutus/">NIGERIA's 12-TIME TV STATION OF THE YEAR</a></li></ul></div></div></div><nav class="site-header_sub hidden-xs" role="navigation" arial-label="primary"><div class="row"><div class="col-sm-12"><div class="site-header-item more-menu-option"><div class="js-scroll-navbar"><ul class="nav-bar nav-bar_sm"><li><a href="//www.channelstv.com/category/local">LOCAL</a></li><li><a href="//www.channelstv.com/category/politics">POLITICS</a></li><li><a href="//www.channelstv.com/category/business">BUSINESS</a></li><li><a href="//www.channelstv.com/category/health">HEALTH</a></li><li><a href="//www.channelstv.com/category/sports">SPORTS</a></li><li><a href="//www.channelstv.com/category/info-tech">TECH</a></li><li><a href="//www.channelstv.com/category/africa">AFRICA</a></li><li><a href="//www.channelstv.com/category/world-news">WORLD</a></li><li> <button class="js-toggle btn btn_alt btn_md btn_site-menu" data-togglecontrols="{" toggleClass":"is-open","selector":".dropdown_site-nav", "activateTarget" true}"> More <i class="fa fa-chevron-down" aria-hidden="true"></i> </button></li></ul></div></div><div class="site-header-item pull-right visible-md-block visible-lg-block"><ul class="nav-bar nav-bar_sm"><li class="search"><a href="#"><i class="fa fa-2x fa-search"></i></a></li><li><a href="https://www.facebook.com/channelsforum"><i class="fa fa-2x fa-facebook"></i></a></li><li><a href="https://twitter.com/channelstv"><i class="fa fa-2x fa-twitter"></i></a></li><li><a href="https://plus.google.com/+ChannelsTelevision/posts"><i class="fa fa-2x fa-google-plus"></i></a></li><li><a href="https://www.youtube.com/subscription_center?add_user=channelsweb"><i class="fa fa-2x fa-youtube"></i></a></li><li><a href="https://www.instagram.com/channelstelevision/"><i class="fa fa-2x fa-instagram"></i></i></a></li></ul></div></div></div></nav></div><div id="searchform" class="searchform-container"><div><form method="get" action="https://www.channelstv.com" class="navbar-form navbar-left" role="search"><div class="form-group small-screen-from-group"> <input type="text" class="form-control small-form-control" placeholder="Search ..." autocomplete="off" name="s"></div> <button type="submit" class="btn btn-primary btn-default btn-lg">Search</button></form></div></div><div id="dropdown" class="dropdown dropdown_site-nav" aria-label="Secondary" role="navigation"><div class="container"><div class="row"><div class="col-xs-6 col-sm-3"><div class="dropdown_col"><h3 class="item-heading">Sections</h3><ul><li><a href="//www.channelstv.com/category/headlines/">Headline</a></li><li><a href="//www.channelstv.com/category/politics">Politics</a></li><li><a href="//www.channelstv.com/category/local">Local</a></li><li><a href="//www.channelstv.com/category/health">Health</a></li><li><a href="//www.channelstv.com/category/business">Business</a></li><li><a href="//www.channelstv.com/category/entertainment">Entertainment</a></li><li><a href="//www.channelstv.com/category/environment">Environment</a></li><li><a href="//www.channelstv.com/category/sports">Sports</a></li><li><a href="//www.channelstv.com/category/crime-watch">Crime</a></li></ul></div></div><div class="col-xs-6 col-sm-3 col"><div class="dropdown_col"><h3 class="item-heading">PROGRAMS</h3><ul><li><a href="//www.channelstv.com/programmes/business-morning/">Business Morning</a></li><li><a href="//www.channelstv.com/programmes/face-off/">Face Off</a></li><li><a href="//www.channelstv.com/programmes/network-africa/">Network Africa</a></li><li><a href="//www.channelstv.com/programmes/politics-today/">Politics Today</a></li><li><a href="//www.channelstv.com/programmes/sports-morning/">Sports This Morning</a></li><li><a href="//www.channelstv.com/programmes/sunrise-daily/">Sunrise Daily</a></li><li><a href="//www.channelstv.com/programmes/sunrise">Sunrise</a></li><li><a href="//www.channelstv.com/programmes/">More Programs</a></li></ul></div></div><div class="col-xs-6 col-sm-3 col"><div class="dropdown_col"><h3 class="item-heading">LIVE TV</h3><ul><li><a href="http://m.channelstv.com">PC & Mac</a></li><li><a href="http://m.channelstv.com">iPad & iPhone</a></li><li><a href="http://m.channelstv.com">Android</a></li><li><a href="http://m.channelstv.com">Blackberry</a></li></ul><h3 class="item-heading">APPs</h3><ul><li><a href="https://play.google.com/store/apps/details?id=com.channelstv.channels.mobile">Download Android App</a></li><li><a href="https://itunes.apple.com/ng/app/channelstv-mobile/id674628071?mt=8">Download for iOS</a></li><li><a href="//www.windowsphone.com/en-ng/store/app/channelstv/d6160e39-91f5-459b-a6a8-977daf9bad03">Download for Windows Phone</a></li></ul></div></div><div class="col-xs-6 col-sm-3"><div class="dropdown_col"><h3 class="item-heading">ABOUT US</h3><ul><li><a href="//www.channelstv.com/aboutus/">About Channels Television</a></li><li><a href="//www.channelstv.com/meet-the-team/">Meet The Team</a></li><li><a href="//www.channelstv.com/meet-the-team/executives/">Executive Management</a></li><li><a href="//www.channelstv.com/meet-the-team/management/">Management</a></li><li><a href="//www.channelstv.com/meet-the-team/presenters/">Presenters</a></li><li><a href="//www.channelstv.com/contactus/">Contact</a></li><li><a href="//www.channelstv.com/aboutus/privacy-policy/">Privacy Policy</a></li><li><a href="//www.channelstv.com/advertising">Advertise</a></li></ul></div></div></div></div></div></div></div></div></div>
+    <div role="main">
+        <div id="fb-root"></div> <script type="c5968e20c5bad238416e6c44-text/javascript">
+                                     (function(d, s, id) {
+                                               var js, fjs = d.getElementsByTagName(s)[0];
+                                               if (d.getElementById(id)) return;
+                                               js = d.createElement(s); js.id = id;
+                                               js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=205604876116272";
+                                               fjs.parentNode.insertBefore(js, fjs);
+                                             }(document, 'script', 'facebook-jssdk'));</script> <div class="grid_panel">
+            <div class="container-wrapper">
+                <div class="container">
+                    <div class="panel-group">
+                        <div class="row">
+                            <div id="ad-top">
+                                <div id="top-leaderboard-small" class="col-sm-12 col-md-12 col-lg-12 ad-slot ad-slot-small  visible-sm"></div><div id="top-leaderboard-xsmall" class="col-sm-12 col-md-12 col-lg-12 ad-slot ad-slot-xsmall  visible-xs">
+                                    <div style="text-align: center;">
+                                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="c5968e20c5bad238416e6c44-text/javascript"></script>  <ins class="adsbygoogle"
+                                                                                                                                                                                     style="display:inline-block;width:320px;height:100px"
+                                                                                                                                                                                     data-ad-client="ca-pub-8675631753543209"
+                                                                                                                                                                                     data-ad-slot="2784691781"></ins> <script type="c5968e20c5bad238416e6c44-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="panel-group"><div class="row"><h2 class="pg-headline" itemprop="headline name">FG Vows To End Killings, Says &#8216;Every Nigerian Life Matters&#8217;</h2></div></div><div class="post-attribute"><div class="row"><div class="col-sm-6 col-md-8 col-lg-5"><div class="post-attrib"><div class="post-attribute-author"> <strong>Channels Television</strong> <span>&nbsp;<br /></span>Updated August 15, 2018</div></div></div><div class="col-sm-6 col-md-4 col-lg-7"><div class="post-share-tool"><div class="addthis_sharing_toolbox"></div></div></div></div></div><div id="africa" class="pnl-section">
+                        <div class="panel-group inner">
+                            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <figure id="attachment_349346" style="max-width: 650px" class="wp-caption alignnone"><img class="size-full wp-image-349346" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://www.channelstv.com/wp-content/uploads/2018/08/Yemi-Osinbajo1.jpg" alt="FG Working To Completely Subdue Bloodshed Perpetrators, Says Osinbajo" width="650" height="350" data-lazy-srcset="https://www.channelstv.com/wp-content/uploads/2018/08/Yemi-Osinbajo1.jpg 650w, https://www.channelstv.com/wp-content/uploads/2018/08/Yemi-Osinbajo1-300x162.jpg 300w" sizes="(max-width: 650px) 100vw, 650px" /><noscript><img class="size-full wp-image-349346" src="https://www.channelstv.com/wp-content/uploads/2018/08/Yemi-Osinbajo1.jpg" alt="FG Working To Completely Subdue Bloodshed Perpetrators, Says Osinbajo" width="650" height="350" srcset="https://www.channelstv.com/wp-content/uploads/2018/08/Yemi-Osinbajo1.jpg 650w, https://www.channelstv.com/wp-content/uploads/2018/08/Yemi-Osinbajo1-300x162.jpg 300w" sizes="(max-width: 650px) 100vw, 650px" /></noscript><figcaption class="wp-caption-text">Acting President Yemi Osinbajo (file)</figcaption></figure><p>&nbsp;</p><div class="ad-image">
+                                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="c5968e20c5bad238416e6c44-text/javascript"></script>  <ins class="adsbygoogle"
+                                                                                                                                                                                         style="display:inline-block;width:300px;height:250px"
+                                                                                                                                                                                         data-ad-client="ca-pub-8675631753543209"
+                                                                                                                                                                                         data-ad-slot="2314255613"></ins> <script type="c5968e20c5bad238416e6c44-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                                        </div><p><em><strong>The Federal Government is committed to addressing the nation’s security challenges and ensuring that the perpetrators of killings in parts of the country are brought to justice.</strong></em></p><p>Acting President Yemi Osinbajo said this on Tuesday when he visited Zamfara State, where attacks by armed bandits in several communities have left many people dead.</p><p><strong>READ ALSO</strong>: <a href="https://www.channelstv.com/2018/07/29/buhari-sends-1000-strong-military-force-after-bandits-in-zamfara/">Buhari Sends ‘1,000-Strong Military Force’ After Bandits In Zamfara</a></p><p>“Every Nigerian life matters, and we are not relenting in our efforts to completely subdue the perpetrators of bloodshed and violence,” he said.</p><p>Although the visit was to commission some projects in the state, Professor Osinbajo promised that the government would sustain measures taken in its fight against criminal activities in Zamfara and other states.</p><p>He said through improved support to law enforcement agencies, the Presidency would deliver its promise to overcome the bandits and other perpetrators of terror across the country.</p><p>The Acting President added, “I assure you that the Federal Government will sustain the tempo of its fight against all forms of criminality; not just here in this state, but all over the country.</p><p>“The fight will, of course, not be won until every hotspot and flashpoint in Nigeria is free and secure.”</p><p>Osinbajo noted that a presidential order had directed the deployment of a special intervention force in Zamfara, supported by a special operation of the Nigerian Air Force, to rid the state of bandits and other criminals.</p><p>The Federal Government had assembled a 1000-strong military force to launch fierce attacks on bandits in Zamfara in July.</p><p>On August 3, the Air Force said <a href="https://www.channelstv.com/2018/08/04/air-strikes-kill-several-bandits-in-zamfara-naf/">NAF combat aircraft killed several bandits</a> during air attacks near Mashema Village and at another location in Yanmari area of the state.</p><p>The police also said on Saturday last week that <a href="https://www.channelstv.com/2018/08/12/police-arrest-eight-suspected-bandits-in-zamfara/">they arrested eight suspected bandits</a> in connection with an attack in Zurmi Local Government Area of the state.</p> <br />
+                                    </div><div class="visible-xs visible-sm">
+                                        <center>
+                                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="c5968e20c5bad238416e6c44-text/javascript"></script>  <ins class="adsbygoogle"
+                                                                                                                                                                                         style="display:inline-block;width:300px;height:600px"
+                                                                                                                                                                                         data-ad-client="ca-pub-8675631753543209"
+                                                                                                                                                                                         data-ad-slot="3025036186"></ins> <script type="c5968e20c5bad238416e6c44-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                                        </center> <br />
+                                    </div>
+                                </div><div class="row">
+                                    <div class="col-sm-6 col-md-6 col-lg-6">
+                                        <div class="row_panel">
+                                            <div class="panel-group_header"><div class="item-heading_group-wrapper"><h2 class="item-heading item-heading_group item-heading_trend">More on Headlines</h2></div></div><div class="row_panel">
+                                                <div class="dy-latest-feed feed feed_latest">
+                                                    <div class="media media_default">
+                                                        <small class="timestamp timestamp_media pull-right" datetime="2015-01-03 11:43:12 Z" itemprop="datePublished">4 hours ago</small><div class="media-body"> <a href="https://www.channelstv.com/2018/08/15/kaduna-assembly-declares-ex-deputy-speaker-another-lawmakers-seats-vacant/"><h3 class="item-heading item-heading_sm" itemprop="headline name">Kaduna Assembly Declares Ex-Deputy Speaker&#8217;s Seat Vacant</h3> </a><div class="story-meta"><div class="flag_wrapper"><div class="flag flag_alt flag_section-name"> <a href="https://www.channelstv.com/2018/08/15/kaduna-assembly-declares-ex-deputy-speaker-another-lawmakers-seats-vacant/"></a></div></div></div></div>
+                                                    </div><div class="media media_default">
+                                                        <small class="timestamp timestamp_media pull-right" datetime="2015-01-03 11:43:12 Z" itemprop="datePublished">4 hours ago</small><div class="media-body"> <a href="https://www.channelstv.com/2018/08/15/reps-inec-meet-over-2019-general-elections/"><h3 class="item-heading item-heading_sm" itemprop="headline name">Reps, INEC Meet Over 2019 General Elections</h3> </a><div class="story-meta"><div class="flag_wrapper"><div class="flag flag_alt flag_section-name"> <a href="https://www.channelstv.com/2018/08/15/reps-inec-meet-over-2019-general-elections/"></a></div></div></div></div>
+                                                    </div><div class="media media_default">
+                                                        <small class="timestamp timestamp_media pull-right" datetime="2015-01-03 11:43:12 Z" itemprop="datePublished">17 hours ago</small><div class="media-body"> <a href="https://www.channelstv.com/2018/08/14/saraki-can-only-avoid-impeachment-if-he-resigns-oshiomhole/"><h3 class="item-heading item-heading_sm" itemprop="headline name">Saraki Can Only Avoid Impeachment If He Resigns – Oshiomhole</h3> </a><div class="story-meta"><div class="flag_wrapper"><div class="flag flag_alt flag_section-name"> <a href="https://www.channelstv.com/2018/08/14/saraki-can-only-avoid-impeachment-if-he-resigns-oshiomhole/"></a></div></div></div></div>
+                                                    </div><div class="media media_default">
+                                                        <small class="timestamp timestamp_media pull-right" datetime="2015-01-03 11:43:12 Z" itemprop="datePublished">21 hours ago</small><div class="media-body"> <a href="https://www.channelstv.com/2018/08/14/presidential-order-igp-renames-sars-appoints-new-commanders/"><h3 class="item-heading item-heading_sm" itemprop="headline name">Presidential Order: IGP Overhauls SARS, Appoints New Commanders</h3> </a><div class="story-meta"><div class="flag_wrapper"><div class="flag flag_alt flag_section-name"> <a href="https://www.channelstv.com/2018/08/14/presidential-order-igp-renames-sars-appoints-new-commanders/"></a></div></div></div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><div class="col-sm-6 col-md-6 col-lg-6"><div class="more-headlines"><h3>MORE FROM CHANNELS TV</h3></div><div><div class="story-link story-link_sm story-link_media story-push-up" data-dy-article="2"><div class="img-container img-container_inner"> <a href="https://www.channelstv.com/2018/08/15/premium-times-asks-osinbajo-to-intervene-in-its-reporters-arrest/"> <img width="86" height="66" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://www.channelstv.com/wp-content/uploads/2017/06/Osinbajo-NEC-180x138.jpg" class="img-responsive" alt="Premium Times Asks Osinbajo To Intervene In Its Reporter&#039;s Arrest" /><noscript><img width="86" height="66" src="https://www.channelstv.com/wp-content/uploads/2017/06/Osinbajo-NEC-180x138.jpg" class="img-responsive" alt="Premium Times Asks Osinbajo To Intervene In Its Reporter&#039;s Arrest" /></noscript> </a></div><div class="media-body"> <a href="https://www.channelstv.com/2018/08/15/premium-times-asks-osinbajo-to-intervene-in-its-reporters-arrest/"><h3 class="item-heading item-heading_sm">Premium Times Asks Osinbajo To Intervene In Its Reporter&#8217;s Arrest</h3> </a><div class="story-meta story-meta_default"><div class="flag flag_default flag_section-name"> <a href="https://www.channelstv.com/2018/08/15/premium-times-asks-osinbajo-to-intervene-in-its-reporters-arrest/"><ul class="post-categories"><li><a href="https://www.channelstv.com/category/local/" rel="category tag">Local</a></li></ul></a></div></div></div></div></div><div><div class="story-link story-link_sm story-link_media story-push-up" data-dy-article="2"><div class="img-container img-container_inner"> <a href="https://www.channelstv.com/2018/08/12/lamido-proposes-scientific-approach-to-resolve-herdsmen-farmers-crisis/"> <img width="86" height="66" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://www.channelstv.com/wp-content/uploads/2018/08/Sule-Lamido-180x138.jpg" class="img-responsive" alt="This Govt Has Turned Corruption Into An Institution – Lamido" /><noscript><img width="86" height="66" src="https://www.channelstv.com/wp-content/uploads/2018/08/Sule-Lamido-180x138.jpg" class="img-responsive" alt="This Govt Has Turned Corruption Into An Institution – Lamido" /></noscript> </a></div><div class="media-body"> <a href="https://www.channelstv.com/2018/08/12/lamido-proposes-scientific-approach-to-resolve-herdsmen-farmers-crisis/"><h3 class="item-heading item-heading_sm">Lamido Proposes Scientific Approach To Resolve Herdsmen, Farmers Crisis</h3> </a><div class="story-meta story-meta_default"><div class="flag flag_default flag_section-name"> <a href="https://www.channelstv.com/2018/08/12/lamido-proposes-scientific-approach-to-resolve-herdsmen-farmers-crisis/"><ul class="post-categories"><li><a href="https://www.channelstv.com/category/local/" rel="category tag">Local</a></li></ul></a></div></div></div></div></div><div><div class="story-link story-link_sm story-link_media story-push-up" data-dy-article="2"><div class="img-container img-container_inner"> <a href="https://www.channelstv.com/2018/08/12/police-arrest-eight-suspected-bandits-in-zamfara/"> <img width="86" height="66" src="data:image/gif;base64,R0lGODdhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=" data-lazy-src="https://www.channelstv.com/wp-content/uploads/2015/07/police-on-suspects-180x138.jpg" class="img-responsive" alt="Police To Begin Recruitment Of 6,000 Personnel Monday" /><noscript><img width="86" height="66" src="https://www.channelstv.com/wp-content/uploads/2015/07/police-on-suspects-180x138.jpg" class="img-responsive" alt="Police To Begin Recruitment Of 6,000 Personnel Monday" /></noscript> </a></div><div class="media-body"> <a href="https://www.channelstv.com/2018/08/12/police-arrest-eight-suspected-bandits-in-zamfara/"><h3 class="item-heading item-heading_sm">Police Arrest Suspected Bandits In Zamfara</h3> </a><div class="story-meta story-meta_default"><div class="flag flag_default flag_section-name"> <a href="https://www.channelstv.com/2018/08/12/police-arrest-eight-suspected-bandits-in-zamfara/"><ul class="post-categories"><li><a href="https://www.channelstv.com/category/headlines/" rel="category tag">Headlines</a></li></ul></a></div></div></div></div></div></div>
+                                </div> <br /> <br /><div class="hidden-xs"></div>  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="c5968e20c5bad238416e6c44-text/javascript"></script> <ins class="adsbygoogle"
+                                                                                                                                                                                                                               style="display:block"
+                                                                                                                                                                                                                               data-ad-format="autorelaxed"
+                                                                                                                                                                                                                               data-ad-client="ca-pub-8675631753543209"
+                                                                                                                                                                                                                               data-ad-slot="5997212850"></ins> <script type="c5968e20c5bad238416e6c44-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script> <div class="visible-lg"></div> <br /> <br /><div id="disqus_thread"></div> <script type="c5968e20c5bad238416e6c44-text/javascript">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       var disqus_shortname = 'channelstelevision'; // Required - Replace example with your forum shortname
 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       /* * * DON'T EDIT BELOW THIS LINE * * */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       (function() {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       })();</script> <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            </div><div class="col-xs-12 col-sm-12 col-md-1 col-lg-1"></div><div class="col-sm-12 col-md-4 col-lg-4">
+                                <div>
+                                    <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12">
+                                        <div class="sidebar-adbox-600">
+                                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="c5968e20c5bad238416e6c44-text/javascript"></script>  <ins class="adsbygoogle"
+                                                                                                                                                                                         style="display:inline-block;width:300px;height:600px"
+                                                                                                                                                                                         data-ad-client="ca-pub-8675631753543209"
+                                                                                                                                                                                         data-ad-slot="3025036186"></ins> <script type="c5968e20c5bad238416e6c44-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                                        </div>
+                                    </div><div class="col-xs-12 col-sm-6 col-md-12 col-lg-12">
+                                        <br /><div class="row"></div> <br /><div class="twitter-sidebar"></div> <br />  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="c5968e20c5bad238416e6c44-text/javascript"></script>  <ins class="adsbygoogle"
+                                                                                                                                                                                                                                                                     style="display:inline-block;width:300px;height:250px"
+                                                                                                                                                                                                                                                                     data-ad-client="ca-pub-8675631753543209"
+                                                                                                                                                                                                                                                                     data-ad-slot="7915358042"></ins> <script type="c5968e20c5bad238416e6c44-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script> <br /><form role="search" method="get" class="search-form" action="https://www.channelstv.com/"> <label> <span class="screen-reader-text">Search</span> <input type="search" class="search-field" placeholder="Search Channels TV" value="" name="s" title="Search Channels TV :" /> </label> <input type="submit" class="search-submit" value="Search" /></form> <br /><div>
+                                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" type="c5968e20c5bad238416e6c44-text/javascript"></script>  <ins class="adsbygoogle"
+                                                                                                                                                                                         style="display:inline-block;width:300px;height:250px"
+                                                                                                                                                                                         data-ad-client="ca-pub-8675631753543209"
+                                                                                                                                                                                         data-ad-slot="2314255613"></ins> <script type="c5968e20c5bad238416e6c44-text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                                        </div> <br />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site-footer" role="contentinfo"><div class="grid_default"><div class="container-gutter"><div class="container"><div class="row"><div class="col-xs-6 col-sm-3"><div class="dropdown_col"><h3 class="item-heading">Sections</h3><ul><li><a href="//www.channelstv.com/category/headlines">Headline</a></li><li><a href="//www.channelstv.com/category/politics">Politics</a></li><li><a href="//www.channelstv.com/category/local">Local</a></li><li><a href="//www.channelstv.com/category/health">Health</a></li><li><a href="//www.channelstv.com/category/business">Business</a></li><li><a href="//www.channelstv.com/category/entertainment">Entertainment</a></li><li><a href="//www.channelstv.com/category/environment">Environment</a></li><li><a href="//www.channelstv.com/category/sports">Sports</a></li><li><a href="//www.channelstv.com/category/crime-watch">Crime</a></li></ul></div></div><div class="col-xs-6 col-sm-3 col"><div class="dropdown_col"><h3 class="item-heading">PROGRAMS</h3><ul><li><a href="//www.channelstv.com/programmes/sunrise-daily/">Sunrise Daily</a></li><li><a href="//www.channelstv.com/programmes/sunrise/">Sunrise</a></li><li><a href="//www.channelstv.com/programmes/business-morning/">Business Morning</a></li><li><a href="//www.channelstv.com/programmes/politics-today/">Politics Today</a></li><li><a href="//www.channelstv.com/programmes/sports-morning/">Sports This Morning</a></li><li><a href="//www.channelstv.com/programmes/face-off/">Face Off</a></li><li><a href="//www.channelstv.com/programmes/diplomatic-channel/">Diplomatic Channels</a></li><li><a href="//www.channelstv.com/programmes/aviation-week/">Aviation This Week</a></li><li><a href="//www.channelstv.com/programmes/">More Programmes</a></li></ul></div></div><div class="col-xs-6 col-sm-3 col"><div class="dropdown_col"><h3 class="item-heading">LIVE TV</h3><ul><li><a href="//m.channelstv.com/">PC & Mac</a></li><li><a href="//m.channelstv.com:1935/live/mobile2/playlist.m3u8">iPad & iPhone</a></li><li><a href="rtsp://m.channelstv.com:1935/live/mobile2/">Android</a></li><li><a href="rtsp://m.channelstv.com:1935/live/mobile2/">Blackberry</a></li></ul><h3 class="item-heading">APPs</h3><ul><li><a href="https://play.google.com/store/apps/details?id=com.channelstv.channels.mobile">Download Android App</a></li><li><a href="https://itunes.apple.com/ng/app/channelstv-mobile/id674628071?mt=8">Download for iOS</a></li></ul><h3 class="item-heading">Socials</h3><ul><li><a href="https://www.facebook.com/channelsforum" target="_blank">Facebook</a></li><li><a href="https://twitter.com/channelstv" target="_blank">Twitter</a></li><li><a href="https://plus.google.com/+ChannelsTelevision/posts" target="_blank">Google Plus</a></li><li><a href="https://www.youtube.com/subscription_center?add_user=channelsweb" target="_blank">Youtube</a></li></ul></div></div><div class="col-xs-6 col-sm-3"><div class="dropdown_col"><h3 class="item-heading">ABOUT US</h3><ul><li><a href="//www.channelstv.com/aboutus/">About Channels Television</a></li><li><a href="//www.channelstv.com/meet-the-team/">Meet The Team</a></li><li><a href="//www.channelstv.com/meet-the-team/executives/">Executive Management</a></li><li><a href="//www.channelstv.com/meet-the-team/management/">Management</a></li><li><a href="//www.channelstv.com/meet-the-team/presenters/">Presenters</a></li><li><a href="//www.channelstv.com/contactus/">Contact</a></li><li><a href="//www.channelstv.com/aboutus/privacy-policy/">Privacy Policy</a></li><li><a href="//www.channelstv.com/advertising">Advertise</a></li></ul></div></div></div><div class="row copyright">Copyright  &copy; 2018 Channels Incorporated Limited. All rights reserved.</div></div></div></div></div>
+    <script src="//www.channelstv.com/wp-content/themes/channels2016/js/jquery.js" type="c5968e20c5bad238416e6c44-text/javascript"></script>
+    <script src="//www.channelstv.com/main.js" type="c5968e20c5bad238416e6c44-text/javascript"></script>
+    <script src="https://www.youtube.com/iframe_api" type="c5968e20c5bad238416e6c44-text/javascript"></script>
+    <script type="c5968e20c5bad238416e6c44-text/javascript">
+        $(document).ready(function () {
+                    $(".js-toggle").click(function() {
+                    $("#dropdown").toggleClass( "is-open" );
+                    //alert( "js-toggle" );
+                    });
+
+                    $(".search").click(function(e) {
+                    e.preventDefault();
+                    $("#searchform").toggleClass( "is-open" );
+
+                    });
+
+                    $(".toggle-breaking").click(function() {
+
+                        $(this).toggleClass("falcon__withdraw");
+                        $(".falcon").toggleClass( "breaking-minimize" );
+                        $(".breaking__text").toggleClass("breaking__text__open");
+
+                    });
+            });</script>
+    <script type="c5968e20c5bad238416e6c44-text/javascript">
+        $(document).ready(function(){
+                $('#fbshare').click(function(e){
+                    e.preventDefault();
+                    //console.log('Facebook share button clicked');
+                    var url = $(this).attr('data-video-share');
+                    url = '//www.youtube.com/watch?v=' + url;
+                    //console.log(url);
+
+                    FB.ui({
+                        method: 'share',
+                        href: url
+                    }, function(response){});
+
+                });
+            });</script>
+    <script type="c5968e20c5bad238416e6c44-text/javascript">
+        function initialize(){
+
+                    // Load videos and Update the controls on load
+                    //loadVideo();
+                    updateTimerDisplay();
+                    updateProgressBar();
+
+
+                    // Clear any old interval.
+                    clearInterval(time_update_interval);
+
+                    // Start interval to update elapsed time display and
+                    // the elapsed part of the progress bar every second.
+                    time_update_interval = setInterval(function () {
+                        updateTimerDisplay();
+                        updateProgressBar();
+                    }, 1000);
+
+                }
+
+                //Load initial video in series
+                function loadVideo() {
+                    player.cueVideoById({
+                      videoId: $vidCen[0][0]
+                    });
+                }
+
+
+
+                // This function is called by initialize()
+                function updateTimerDisplay(){
+                    // Update current time text display.
+                    $('#current-time').text(formatTime( player.getCurrentTime() ));
+                    $('#duration').text(formatTime( player.getDuration() ));
+                }
+
+
+                // This function is called by initialize()
+                function updateProgressBar(){
+                    // Update the value of our progress bar accordingly.
+                    $('#progress-bar').val((player.getCurrentTime() / player.getDuration()) * 100);
+                }
+
+
+                // Progress bar
+                $('#progress-bar').on('mouseup touchend', function (e) {
+
+                    // Calculate the new time for the video.
+                    // new time in seconds = total duration in seconds * ( value of range input / 100 )
+                    var newTime = player.getDuration() * (e.target.value / 100);
+
+                    // Skip video to new time.
+                    player.seekTo(newTime);
+
+                });
+
+
+
+                // Playback
+                $('#play').on('click', function () {
+                    player.playVideo();
+                    console.log('click');
+                });
+
+
+                $('#pause').on('click', function () {
+                    player.pauseVideo();
+                });
+
+
+                // Load video on thumbnail/title click
+                $('.yt_thumbnail').on('click', function (e) {
+
+                    //return false;
+                    e.preventDefault();
+                    var url = $(this).attr('data-video-id');
+                    var title = $(this).attr('data-video-title');
+                    $('#videoTitle').text(title);
+                    console.log('Video Clicked');
+
+                    //Update the attribute value of the share icon when a new video is selected
+                    $('#fbshare').attr( 'data-video-share', url);
+
+                    player.loadVideoById(url);
+                    $('.blur_bg').attr('xlink:href',"//i1.ytimg.com/vi/" +url+ "/mqdefault.jpg");
+
+                });
+
+
+
+
+                // Helper Functions
+                function formatTime(time){
+                    time = Math.round(time);
+
+                    var minutes = Math.floor(time / 60),
+                        seconds = time - minutes * 60;
+
+                    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+                    return minutes + "m" + " " + seconds + "s";
+                }</script>
+    <script type="c5968e20c5bad238416e6c44-text/javascript">
+        $(window).bind("load",function(){
+
+                    if (document.cookie.indexOf("privacy_policy_shown") == -1) {
+
+                        $('.cookie-alert-wrapper').fadeIn("slow");
+
+                        $('.accept-policy').click(function(e){
+                            e.preventDefault();
+                            document.cookie = "name=privacy_policy_shown; max-age=60x60x24x365; path=/; domain=channelstv.com";
+                            $('.cookie-alert-wrapper').fadeOut("slow");
+
+                        });
+
+                        $('.cookie-alert-close-btn').click(function(e){
+                            e.preventDefault();
+                            document.cookie = "name=privacy_policy_shown; max-age=60x60x24x365; path=/; domain=channelstv.com";
+                            $('.cookie-alert-wrapper').fadeOut("slow");
+
+                        });
+
+
+
+                    }else {
+                        $('.cookie-alert-wrapper').fadeOut("slow");
+                    }
+
+
+                });</script>
+    <script type="c5968e20c5bad238416e6c44-text/javascript" async="async" src='https://www.channelstv.com/wp-content/themes/channels2016/js/bootstrap.min.js'></script>
+    <script type="c5968e20c5bad238416e6c44-text/javascript" src='https://www.channelstv.com/wp-content/themes/channels2016/js/html5shiv.js'></script>
+    <script type="c5968e20c5bad238416e6c44-text/javascript" async="async" src='https://www.channelstv.com/wp-content/themes/channels2016/js/respond.js'></script>
+    <script type="c5968e20c5bad238416e6c44-text/javascript" async="async" src='https://www.channelstv.com/wp-content/themes/channels2016/js/respond.min.js'></script>
+    <script type="c5968e20c5bad238416e6c44-text/javascript" async="async" src='//s7.addthis.com/js/300/addthis_widget.js?#pubid=ra-53da69401abd3698'></script>
+    <script type="c5968e20c5bad238416e6c44-text/javascript" src='https://www.channelstv.com/wp-includes/js/comment-reply.min.js'></script>
+    <script type="c5968e20c5bad238416e6c44-text/javascript">
+        (function(w, d){
+            var b = d.getElementsByTagName("body")[0];
+            var s = d.createElement("script"); s.async = true;
+            var v = !("IntersectionObserver" in w) ? "8.7.1" : "10.5.2";
+            s.src = "https://www.channelstv.com/wp-content/plugins/wp-rocket/inc/front/js/lazyload-" + v + ".min.js";
+            w.lazyLoadOptions = {
+                elements_selector: "img, iframe",
+                data_src: "lazy-src",
+                data_srcset: "lazy-srcset",
+                skip_invisible: false,
+                class_loading: "lazyloading",
+                class_loaded: "lazyloaded",
+                threshold: 300,
+                callback_load: function(element) {
+                    if ( element.tagName === "IFRAME" && element.dataset.rocketLazyload == "fitvidscompatible" ) {
+                        if (element.classList.contains("lazyloaded") ) {
+                            if (typeof window.jQuery != "undefined") {
+                                if (jQuery.fn.fitVids) {
+                                    jQuery(element).parent().fitVids();
+                                }
+                            }
+                        }
+                    }
+                }
+            }; // Your options here. See "recipes" for more information about async.
+            b.appendChild(s);
+        }(window, document));
+
+        // Listen to the Initialized event
+        window.addEventListener('LazyLoad::Initialized', function (e) {
+            // Get the instance and puts it in the lazyLoadInstance variable
+            var lazyLoadInstance = e.detail.instance;
+
+            var observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    lazyLoadInstance.update();
+                } );
+            } );
+
+            var b      = document.getElementsByTagName("body")[0];
+            var config = { childList: true, subtree: true };
+
+            observer.observe(b, config);
+        }, false);</script>
+    <script type="c5968e20c5bad238416e6c44-text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"bdb5a3bef7","applicationID":"53306506","transactionName":"ZFcEZhZRWkMAUEIPDV0dJ1EQWVteTkBfCAVfVw==","queueTime":0,"applicationTime":1693,"atts":"SBAHEF5LSU0=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/2448a7bd/cloudflare-static/rocket-loader.min.js" data-cf-nonce="c5968e20c5bad238416e6c44-" defer=""></script>
 </body>
 </html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->

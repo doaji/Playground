@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebAppli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeWars", "CodeWars\CodeWars.csproj", "{8D4B8FC7-CE07-4363-A9BB-156F37EF68A9}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonApplication1", "PythonApplication1\PythonApplication1.pyproj", "{351BD4E4-5994-4695-BD30-D1C7370BBC78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,11 +70,17 @@ Global
 		{8D4B8FC7-CE07-4363-A9BB-156F37EF68A9}.DebugLocal|Any CPU.Build.0 = Debug|Any CPU
 		{8D4B8FC7-CE07-4363-A9BB-156F37EF68A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D4B8FC7-CE07-4363-A9BB-156F37EF68A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{351BD4E4-5994-4695-BD30-D1C7370BBC78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{351BD4E4-5994-4695-BD30-D1C7370BBC78}.DebugLocal|Any CPU.ActiveCfg = Debug|Any CPU
+		{351BD4E4-5994-4695-BD30-D1C7370BBC78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8EBBDF46-AE2C-4C43-92A6-DE13B10C303D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {544BFACD-D94B-4199-8BE6-E7FA6B50C5F8}
 	EndGlobalSection
 EndGlobal
